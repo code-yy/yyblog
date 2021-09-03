@@ -5,16 +5,16 @@ import { FaTwitter } from "react-icons/fa";
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <h3 className={styles.logo}>Follow Me</h3>
-      <Link href="https://twitter.com/yuto_yy_76">
-        <a>
-          <p>
+      <h3 className={styles.logo}>
+        Follow Me
+        <Link href="https://twitter.com/yuto_yy_76">
+          <a>
             {" "}
             in
             <FaTwitter />
-          </p>
-        </a>
-      </Link>
+          </a>
+        </Link>
+      </h3>
     </footer>
   );
 }

@@ -10,7 +10,7 @@
   width: 400px;
   height: 400px;
   border-radius: 50%;
-  background-image: url(IMG_2008.JPG);
+  background-image: url(image/IMG_2008.JPG);
   background-size: cover;
   margin-right: 30px;
 }
@@ -19,6 +19,15 @@
   font-size: 80px;
   font-weight: bolder;
   margin-left: 30px;
+}
+
+.Skills {
+  font-size: 40px;
+  margin-left: 30px;
+}
+.grid {
+  height: 500px;
+  width: 510px;
 }
 
 .grid ul {
@@ -37,6 +46,7 @@
   line-height: 145px;
   border: solid 1px #000000;
 }
+
 .list_style1 {
   background-color: aquamarine;
   font-size: 25px;

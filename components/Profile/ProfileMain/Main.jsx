@@ -1,8 +1,12 @@
 import Link from "next/link";
 import styles from "./Main.module.css";
+import icon_java from "./image/javascript.png";
+import icon_php from "./image/php.png";
+import icon_react from "./image/react.png";
+import icon_next from "./image/nextjs-logo.png";
 
-// トップページの内装を作っていく
-// 円の中に文字や画像を入れていく
+import Image from "next/image";
+
 export default function Profile_Main() {
   return (
     <main className={styles.main}>
@@ -11,23 +15,11 @@ export default function Profile_Main() {
       <div className={styles.grid}>
         <p className={styles.description}>Yuto Yoshino</p>
 
-        <ul>
-          <Link href="/Profile">
-            <a>
-              <li className={styles.list_style1}>Profile</li>
-            </a>
-          </Link>
-          <Link href="/Works">
-            <a>
-              <li className={styles.list_style2}>Works</li>
-            </a>
-          </Link>
-          <Link href="/">
-            <a>
-              <li className={styles.list_style3}>Contact</li>
-            </a>
-          </Link>
-        </ul>
+        <p className={styles.Skills}>□Skills</p>
+        <Image src={icon_java} alt="icon_java" width="120px" height="120px" />
+        <Image src={icon_php} alt="icon_php" width="160px" height="120px" />
+        <Image src={icon_react} alt="icon_react" width="140px" height="120px" />
+        <Image src={icon_next} alt="icon_react" width="140px" height="120px" />
       </div>
     </main>
   );
