@@ -1,0 +1,28 @@
+.Header {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  /* float: left; */
+}
+
+.Header div {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-image: url(IMG_8433\ 2.PNG);
+  background-size: cover;
+  margin: 20px 30px 0 0;
+}
+
+.Header ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0;
+}
+
+.Header li {
+  margin-right: 20px;
+  font-size: 20px;
+}

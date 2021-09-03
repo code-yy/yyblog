@@ -1,9 +1,31 @@
 .container {
-  /* min-height: 100vh; */
   padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* height: 100vh; */
+  /* 背景のアニメーション */
+  animation: bgchange 20s ease infinite; /*変化の時間を変更したい場合は20sの部分を好きな時間に変更*/
+}
+
+/* アニメーションのためのCSS */
+@keyframes bgchange {
+  0% {
+    background: #ffe6e1;
+  } /*変化させたい色*/
+  25% {
+    background: #fdcb9e;
+  } /*変化させたい色*/
+  50% {
+    background: #fdcbc1;
+  } /*変化させたい色*/
+  75% {
+    background: #ffff8c;
+  } /*変化させたい色*/
+  90% {
+    background: #b2dffb;
+  } /*変化させたい色*/
+  100% {
+    background: #ffe6e1;
+  } /*変化させたい色*/
 }
