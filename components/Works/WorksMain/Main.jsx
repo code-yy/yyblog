@@ -17,7 +17,7 @@ export default function Works_Main() {
           <Link href="https://utopia300.github.io/yuto_it/quiz.test/index.html">
             <a className={styles.list_style3}></a>
           </Link>
-          <Link href="/">
+          <Link href="https://yuto-page.vercel.app/">
             <a className={styles.list_style4}></a>
           </Link>
         </div>
