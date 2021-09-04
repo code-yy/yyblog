@@ -4,28 +4,23 @@ import styles from "./Main.module.css";
 export default function Works_Main() {
   return (
     <main className={styles.main}>
-      <h2 className={styles.circle}></h2>
-
       <div className={styles.grid}>
         <p className={styles.description}>Works</p>
 
-        {/* <ul>
-          <Link href="/Profile">
-            <a>
-              <li className={styles.list_style1}>Profile</li>
-            </a>
+        <div className={styles.grid_div}>
+          <Link href="https://utopiayy.sakura.ne.jp/">
+            <a className={styles.list_style1}></a>
           </Link>
-          <Link href="/Works">
-            <a>
-              <li className={styles.list_style2}>Works</li>
-            </a>
+          <Link href="https://utopia300.github.io/yuto_it/todo.test/index.html">
+            <a className={styles.list_style2}></a>
           </Link>
-          <Link href="/Contact">
-            <a>
-              <li className={styles.list_style3}>Contact</li>
-            </a>
+          <Link href="https://utopia300.github.io/yuto_it/quiz.test/index.html">
+            <a className={styles.list_style3}></a>
           </Link>
-        </ul> */}
+          <Link href="/">
+            <a className={styles.list_style4}></a>
+          </Link>
+        </div>
       </div>
     </main>
   );

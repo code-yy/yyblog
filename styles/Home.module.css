@@ -1,8 +1,5 @@
 .container {
   padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
   /* 背景のアニメーション */
   animation: bgchange 20s ease infinite; /*変化の時間を変更したい場合は20sの部分を好きな時間に変更*/

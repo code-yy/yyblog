@@ -20,11 +20,6 @@ export default function Main() {
               <li className={styles.list_style2}>Works</li>
             </a>
           </Link>
-          <Link href="/Contact">
-            <a>
-              <li className={styles.list_style3}>Contact</li>
-            </a>
-          </Link>
         </ul>
       </div>
     </main>

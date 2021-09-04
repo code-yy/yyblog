@@ -1,14 +1,22 @@
 .footer {
+  display: flex;
+  justify-content: space-evenly;
   width: 100%;
   border-top: 1px solid black;
   text-align: center;
-  height: auto;
-  margin-top: 70px;
-  margin-bottom: 40px;
+  margin-top: 140px;
+  padding-bottom: 30px;
 }
 .logo {
   font-size: 20px;
 }
 .logo a {
   font-size: 30px;
+}
+.logo_2 {
+  font-size: 20px;
+}
+
+.logo_p {
+  margin: 0;
 }

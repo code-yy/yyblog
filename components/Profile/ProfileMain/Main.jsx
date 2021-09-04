@@ -1,4 +1,3 @@
-import Link from "next/link";
 import styles from "./Main.module.css";
 import icon_java from "./image/javascript.png";
 import icon_php from "./image/php.png";

@@ -10,24 +10,22 @@ export default function Header() {
         </a>
       </Link>
       <ul>
+        {/* top */}
         <Link href="/">
           <a>
             <li className={styles.list_style0}>Top</li>
           </a>
         </Link>
+        {/* Profile */}
         <Link href="/Profile">
           <a>
             <li className={styles.list_style1}>Profile</li>
           </a>
         </Link>
+        {/* Works */}
         <Link href="/Works">
           <a>
             <li className={styles.list_style2}>Works</li>
-          </a>
-        </Link>
-        <Link href="/Contact">
-          <a>
-            <li className={styles.list_style3}>Contact</li>
           </a>
         </Link>
       </ul>
