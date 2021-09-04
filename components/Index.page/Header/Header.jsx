@@ -25,7 +25,7 @@ export default function Header() {
         {/* Works */}
         <Link href="/Works">
           <a>
-            <li className={styles.list_style2}>Works</li>
+            <li className={styles.list_style2}>Portfolio</li>
           </a>
         </Link>
       </ul>
