@@ -6,20 +6,8 @@ import { client } from "../../lib/cilent";
 import Link from "next/link";
 import type { GetStaticProps, NextPage } from "next";
 
-type Blog = {
-  title: string;
-  description: string;
-  image: {
-    url: string;
-  };
-  body: string;
-  category: { name: string };
-  tags: { name: string }[];
-  createdAt: string;
-};
-
 export const getStaticProps: GetStaticProps = async () => {
-  const blogs: Blogs = await client.get({ endpoint: "blogs" });
+  const blogs = await client.get({ endpoint: "blogs" });
   return {
     props: {
       blogs: blogs,
@@ -29,7 +17,7 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 type Props = {
-  blogs: Blogs;
+  blogs: any;
 };
 
 const Home: NextPage<Props> = (props) => {
@@ -39,7 +27,7 @@ const Home: NextPage<Props> = (props) => {
 
       <Main />
       <ul>
-        {props.blogs.contents.map((blog, index) => {
+        {props.blogs.contents.map((blog: any, index: any) => {
           return (
             <li key={index}>
               <Link href={`/blog/${blog.slug}`}>
