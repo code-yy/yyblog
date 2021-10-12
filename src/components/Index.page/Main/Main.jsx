@@ -15,9 +15,9 @@ export default function Main() {
               <li className={styles.list_style1}>Profile</li>
             </a>
           </Link>
-          <Link href="/Works">
+          <Link href="/Portfolio">
             <a>
-              <li className={styles.list_style2}>Works</li>
+              <li className={styles.list_style2}>Portfolio</li>
             </a>
           </Link>
         </ul>

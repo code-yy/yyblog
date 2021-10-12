@@ -26,7 +26,7 @@ const Home: NextPage<Props> = (props) => {
       <Header title="YutoBlog" />
 
       <Main />
-      <ul>
+      {/* <ul>
         {props.blogs.contents.map((blog: any, index: any) => {
           return (
             <li key={index}>
@@ -36,7 +36,7 @@ const Home: NextPage<Props> = (props) => {
             </li>
           );
         })}
-      </ul>
+      </ul> */}
       <Footer />
     </div>
   );
