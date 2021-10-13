@@ -12,7 +12,7 @@ export default function Footer() {
             <FaTwitter size={30} color={"#00acee"} />
           </a>
         </Link>
-        <p className={styles.logo_p}>Follow Me</p>
+        <p className={styles.logo_p}>yuto_yy_76</p>
       </h3>
       <h3 className={styles.logo_2}>
         <IoMdMail size={30} />

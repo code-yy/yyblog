@@ -38,6 +38,11 @@ const Header = ({ title = "YutoBlog" }: Props) => {
               <li className={styles.list_style2}>Portfolio</li>
             </a>
           </Link>
+          <Link href="/blogs">
+            <a>
+              <li className={styles.list_style2}>Blog</li>
+            </a>
+          </Link>
         </ul>
       </header>
     </div>
