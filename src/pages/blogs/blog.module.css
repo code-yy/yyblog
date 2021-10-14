@@ -18,3 +18,13 @@
   color: black;
   padding-top: 20px;
 }
+
+.title {
+  text-align: center;
+  font-size: 30px;
+  padding: 30px;
+}
+
+.blogs_category {
+  padding-left: 10px;
+}

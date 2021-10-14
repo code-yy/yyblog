@@ -25,6 +25,8 @@ const Blog: NextPage<Props> = (props) => {
     <div className={styles.container}>
       <Header title="Blog || YutoBlog" />
 
+      <h2 className={styles.title}>ブログ一覧</h2>
+
       {props.blogs.contents.map((blogs: any, index: any, tags: any) => {
         return (
           <div key={index} className={styles.wrap}>
@@ -32,16 +34,15 @@ const Blog: NextPage<Props> = (props) => {
               {/* タイトルを表示 */}
               <Link href={`/blogs/${blogs.id}`}>
                 <a>
-                  <h2 className={styles.blogs_title}>{blogs.title}</h2>
+                  <h3 className={styles.blogs_title}>{blogs.title}</h3>
                 </a>
               </Link>
 
               {/* 日付を表示 */}
-              <span className="block">
+              <div className={styles.blogs_category}>
                 {fixDateFormat(blogs.createdAt)}
-                <br />
-                {/* タグを表示 */}#{blogs.category[0]} #{blogs.category[1]} #{blogs.category[2]}
-              </span>
+                <br />#{blogs.category[0]} #{blogs.category[1]} #{blogs.category[2]}
+              </div>
             </div>
           </div>
         );
