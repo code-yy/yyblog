@@ -3,6 +3,7 @@ import type { NextPage } from "next";
 import Header from "../../../components/Index.page/Header/Header";
 import Footer from "../../../components/Index.page/Footer/Footer";
 import styles from "./blog.module.css";
+import { fixDateFormat } from "../../../../lib/fixDateFormat";
 
 type Props = {
   blogs: any;
@@ -17,6 +18,10 @@ const BlogId: NextPage<Props> = (props) => {
         <div className={styles.wrapper}>
           <div className={styles.blogs}>
             <h1 className={styles.title}>{props.blogs.title}</h1>
+            <div className={styles.createdAt}>
+              {fixDateFormat(props.blogs.createdAt)}
+              <br />#{props.blogs.category[0]} #{props.blogs.category[1]} #{props.blogs.category[2]}
+            </div>
             <div className={styles.body}>
               <img src={props.blogs.image.url} alt="" className={styles.blog_image} />
               <div className={styles.blog_container}>
