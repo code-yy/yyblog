@@ -20,7 +20,8 @@
     "**/*.tsx",
     "src/pages/index.tsx",
     "src/pages/_app.tsx",
-    "src/components/Works/WorksMain/Main.jsx"
+    "src/components/Works/WorksMain/Main.jsx",
+    "src/pages/blogs/index.jsx"
   ],
   "exclude": ["node_modules"]
 }

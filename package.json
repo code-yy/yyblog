@@ -14,6 +14,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.15",
+    "@mui/material": "^5.0.3",
     "microcms-js-sdk": "^1.2.0",
     "next": "11.1.2",
     "react": "17.0.2",
@@ -25,6 +26,6 @@
     "@types/react": "^17.0.27",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",
-    "typescript": "^4.4.3"
+    "typescript": "^4.4.4"
   }
 }
