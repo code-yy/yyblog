@@ -1,21 +1,25 @@
 .footer {
   display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-  border-top: 1px solid black;
-  text-align: center;
-  background-color: #595959;
-}
-.logo {
-  font-size: 20px;
-}
-.logo a {
-  font-size: 30px;
-}
-.logo_2 {
-  font-size: 20px;
+  justify-content: space-around;
+  background-color: #454545;
+  color: #f7fcfd;
+  padding: 10px 0;
 }
 
-.logo_p {
-  margin: 0;
+.footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0;
+}
+
+.footer li {
+  margin-right: 20px;
+  font-size: 20px;
+  transition: 0.2s;
+}
+
+.footer li:hover {
+  cursor: pointer;
 }
