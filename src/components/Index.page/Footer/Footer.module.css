@@ -4,6 +4,7 @@
   background-color: #454545;
   color: #f7fcfd;
   padding: 10px 0;
+  align-items: center;
 }
 
 .footer ul {
@@ -22,4 +23,9 @@
 
 .footer li:hover {
   cursor: pointer;
+}
+
+.icons a {
+  margin-right: 10px;
+  font-size: 30px;
 }

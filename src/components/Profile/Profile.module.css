@@ -1,0 +1,57 @@
+.main {
+  text-align: center;
+  align-items: center;
+  margin: 80px 0;
+  height: auto;
+}
+
+.circle {
+  margin: auto;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background-image: url("../../../public/Images/IMG_2008.JPG");
+  background-size: cover;
+}
+
+.description {
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+.Skills {
+  font-size: 40px;
+}
+
+.Profile {
+  text-align: center;
+  width: 250px;
+  margin: auto;
+  margin-top: 30px;
+  font-size: 40px;
+}
+
+.Profile_container {
+  width: 250px;
+  margin: auto;
+  text-align: left;
+  font-size: 30px;
+}
+.Profile_list {
+}
+
+.Skills_logo {
+  display: flex;
+  justify-content: center;
+}
+
+.Skills_logo div {
+  margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}

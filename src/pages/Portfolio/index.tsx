@@ -1,14 +1,14 @@
-import styles from "../../components/Works/WorksMain/Main.module.css";
+import styles from "../../components/Portfolio/Portfolio.module.css";
 import Header from "../../components/Index.page/Header/Header";
 import Footer from "../../components/Index.page/Footer/Footer";
-import Main_Works from "../../components/Works/WorksMain/Main";
+import Portfolio_Main from "../../components/Portfolio";
 
 export default function Portfolio() {
   return (
     <div className={styles.container}>
       <Header title="Portfolio || YutoBlog" />
 
-      <Main_Works />
+      <Portfolio_Main />
 
       <Footer />
     </div>

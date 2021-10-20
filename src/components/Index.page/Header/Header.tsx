@@ -14,36 +14,38 @@ const Header = ({ title = "YutoBlog" }: Props) => {
       </Head>
 
       <header className={styles.Header}>
-        <Link href="https://github.com/Utopia300">
+        <Link href="/">
           <a>
             <div></div>
           </a>
         </Link>
-        <ul>
-          {/* top */}
-          <Link href="/">
-            <a>
-              <li className={styles.list_style0}>Top</li>
-            </a>
-          </Link>
-          {/* Profile */}
-          <Link href="/Profile">
-            <a>
-              <li className={styles.list_style1}>Profile</li>
-            </a>
-          </Link>
-          {/* Works */}
-          <Link href="/Portfolio">
-            <a>
-              <li className={styles.list_style2}>Portfolio</li>
-            </a>
-          </Link>
-          <Link href="/blogs">
-            <a>
-              <li className={styles.list_style2}>Blog</li>
-            </a>
-          </Link>
-        </ul>
+        <nav>
+          <ul>
+            {/* top */}
+            <Link href="/">
+              <a>
+                <li>Top</li>
+              </a>
+            </Link>
+            {/* Profile */}
+            <Link href="/Profile">
+              <a>
+                <li>Profile</li>
+              </a>
+            </Link>
+            {/* Works */}
+            <Link href="/Portfolio">
+              <a>
+                <li>Portfolio</li>
+              </a>
+            </Link>
+            <Link href="/blogs">
+              <a>
+                <li>Blog</li>
+              </a>
+            </Link>
+          </ul>
+        </nav>
       </header>
     </div>
   );

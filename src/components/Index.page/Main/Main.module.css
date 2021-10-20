@@ -1,62 +1,56 @@
 .main {
-  flex: 1;
-  display: flex;
-  justify-content: center;
+  text-align: center;
   align-items: center;
-  margin: 80px 0;
-  height: 550px;
+  margin: 55px 0;
 }
 
 .circle {
+  margin: auto;
   width: 400px;
   height: 400px;
   border-radius: 50%;
   background-image: url("../../../../public/image/IMG_2008.JPG");
   background-size: cover;
-  margin-right: 30px;
 }
 
 .description {
-  font-size: 80px;
+  font-size: 60px;
   font-weight: bolder;
-  margin-left: 30px;
 }
 
-.grid ul {
-  list-style: none;
+.link {
+  padding-top: 20px;
   display: flex;
-  padding-left: 0;
+  justify-content: center;
 }
 
-.grid li {
+.link a {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   margin-right: 20px;
-  margin-bottom: 80px;
   text-align: center;
   line-height: 145px;
   border: solid 1px #000000;
-  transition: 0.2s;
 }
 
-.grid li:hover {
-  width: 180px;
-  height: 180px;
-  line-height: 175px;
-  font-size: 40px;
-}
-.list_style1 {
-  background-color: aquamarine;
+.link_style1 {
+  background-color: white;
   font-size: 25px;
 }
 
-.list_style2 {
-  background-color: brown;
+.link_style2 {
+  background-color: orange;
   font-size: 25px;
 }
-.list_style3 {
+
+.link_style3 {
   background-color: chartreuse;
+  font-size: 25px;
+}
+
+.link_style4 {
+  background-color: aquamarine;
   font-size: 25px;
 }
 

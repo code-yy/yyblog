@@ -1,9 +1,9 @@
-import styles from "../../components/Profile/ProfileMain/Main.module.css";
+import styles from "../../components/Profile/Profile.module.css";
 import Header from "../../components/Index.page/Header/Header";
 import Footer from "../../components/Index.page/Footer/Footer";
-import Profile_Main from "../../components/Profile/ProfileMain/Main";
+import Profile_Main from "../../components/Profile";
 
-export default function About() {
+export default function Profile() {
   return (
     <div className={styles.container}>
       <Header title="Profile || YutoBlog" />
