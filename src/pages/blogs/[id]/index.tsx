@@ -10,7 +10,7 @@ type Blogs = {
   title?: string;
   description?: string;
   body?: any;
-  image?: { url: string };
+  image?: any;
   category?: any;
   createdAt?: any;
 };
