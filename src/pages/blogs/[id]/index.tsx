@@ -5,8 +5,18 @@ import Footer from "../../../components/Index.page/Footer/Footer";
 import styles from "./blog.module.css";
 import { fixDateFormat } from "../../../../lib/fixDateFormat";
 
+type Blogs = {
+  id?: string;
+  title?: string;
+  description?: string;
+  body?: any;
+  image?: { url: string };
+  category?: any;
+  createdAt?: any;
+};
+
 type Props = {
-  blogs: any;
+  blogs: Blogs;
 };
 
 const BlogId: NextPage<Props> = (props) => {

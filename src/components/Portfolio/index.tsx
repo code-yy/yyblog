@@ -8,12 +8,16 @@ export default function Profile() {
         <p className={styles.description}>Portfolio</p>
 
         <div className={styles.grid_div}>
-          <Link href="https://utopiayy.sakura.ne.jp/">
+          <Link href="https://yutopage.vercel.app/">
             <a className={styles.list_style1}></a>
           </Link>
 
-          <Link href="https://yuto-page.vercel.app/">
-            <a className={styles.list_style4}></a>
+          <Link href="https://zenn.dev/yuto76?tab=scraps">
+            <a className={styles.list_style2}></a>
+          </Link>
+
+          <Link href="https://uozumi-fc.vercel.app/">
+            <a className={styles.list_style3}></a>
           </Link>
         </div>
       </div>
