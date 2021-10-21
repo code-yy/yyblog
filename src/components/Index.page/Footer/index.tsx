@@ -11,24 +11,24 @@ function Footer() {
           {/* top */}
           <Link href="/">
             <a>
-              <li className={styles.list_style0}>Top</li>
+              <li>Top</li>
             </a>
           </Link>
           {/* Profile */}
           <Link href="/Profile">
             <a>
-              <li className={styles.list_style1}>Profile</li>
+              <li>Profile</li>
             </a>
           </Link>
           {/* Works */}
           <Link href="/Portfolio">
             <a>
-              <li className={styles.list_style2}>Portfolio</li>
+              <li>Portfolio</li>
             </a>
           </Link>
           <Link href="/blogs">
             <a>
-              <li className={styles.list_style3}>Blog</li>
+              <li>Blog</li>
             </a>
           </Link>
         </ul>

@@ -1,45 +1,50 @@
-.main {
-  margin: 80px 0;
-  height: 550px;
+/* PC */
+@media screen and (min-width: 767px) {
+  .main {
+    text-align: center;
+    align-items: center;
+    margin: 80px 0;
+  }
+
+  .description {
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+  }
+  .grid_div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .grid_div a {
+    margin-bottom: 20px;
+    object-fit: cover;
+  }
 }
 
-.description {
-  font-size: 50px;
-  font-weight: bolder;
-  text-align: center;
-}
-.grid_div {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding: 0 100px;
-}
+/* スマホ */
+@media (max-width: 479px) {
+  .main {
+    text-align: center;
+    align-items: center;
+    margin: 20px 0;
+  }
 
-.grid_div a {
-  margin-bottom: 20px;
-}
+  .description {
+    font-size: 30px;
+    font-weight: bolder;
+  }
+  .grid_div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
 
-.list_style1 {
-  background-image: url("../../../public/Profile/YutoBlog.png");
-  background-size: cover;
-  padding: 100px 200px;
-}
-
-.list_style2 {
-  background-image: url("../../../public/Profile/yuto-Zenn.png");
-  background-size: cover;
-  padding: 100px 200px;
-}
-
-.list_style3 {
-  background-image: url("../../../public/Profile/UOZUMI FC.png");
-  background-size: cover;
-  padding: 100px 200px;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
+  .grid_div a {
+    margin-bottom: 20px;
+    object-fit: cover;
+    width: 300px;
+    height: 200px;
   }
 }

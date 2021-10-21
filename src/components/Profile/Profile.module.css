@@ -1,57 +1,100 @@
-.main {
-  text-align: center;
-  align-items: center;
-  margin: 80px 0;
-  height: auto;
+/* PC */
+@media screen and (min-width: 767px) {
+  .main {
+    text-align: center;
+    align-items: center;
+    margin: 80px 0;
+    height: auto;
+  }
+
+  .circle {
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-image: url("../../../public/Images/IMG_2008.JPG");
+    background-size: cover;
+  }
+
+  .description {
+    font-size: 50px;
+    font-weight: bolder;
+  }
+
+  .Profile {
+    width: 250px;
+    margin: auto;
+    margin-top: 30px;
+    font-size: 40px;
+  }
+
+  .Profile_container {
+    width: 250px;
+    margin: auto;
+    text-align: left;
+    font-size: 30px;
+  }
+  .Profile_list {
+  }
+
+  .Skills {
+    font-size: 40px;
+  }
+
+  .Skills_logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .Skills_logo div {
+    margin-right: 10px;
+  }
 }
 
-.circle {
-  margin: auto;
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-  background-image: url("../../../public/Images/IMG_2008.JPG");
-  background-size: cover;
-}
+/* スマホ */
+@media screen and (max-width: 479px) {
+  .main {
+    text-align: center;
+    align-items: center;
+    margin: 20px 0;
+  }
 
-.description {
-  font-size: 50px;
-  font-weight: bolder;
-}
+  .circle {
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url("../../../public/Images/IMG_2008.JPG");
+    background-size: cover;
+  }
 
-.Skills {
-  font-size: 40px;
-}
+  .description {
+    font-size: 30px;
+    font-weight: bolder;
+  }
 
-.Profile {
-  text-align: center;
-  width: 250px;
-  margin: auto;
-  margin-top: 30px;
-  font-size: 40px;
-}
+  .Profile {
+    width: 250px;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 30px;
+  }
 
-.Profile_container {
-  width: 250px;
-  margin: auto;
-  text-align: left;
-  font-size: 30px;
-}
-.Profile_list {
-}
+  .Profile_container {
+    width: 200px;
+    margin: auto;
+    text-align: left;
+    font-size: 20px;
+  }
 
-.Skills_logo {
-  display: flex;
-  justify-content: center;
-}
+  .Skills {
+    font-size: 30px;
+  }
 
-.Skills_logo div {
-  margin-right: 10px;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
+  .Skills_logo {
+    padding: 0 50px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
   }
 }

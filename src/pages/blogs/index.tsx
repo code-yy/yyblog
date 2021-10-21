@@ -2,8 +2,8 @@ import styles from "./blog.module.css";
 import { client } from "../../../lib/client";
 import Link from "next/link";
 import type { GetStaticProps, NextPage } from "next";
-import Header from "../../components/Index.page/Header/Header";
-import Footer from "../../components/Index.page/Footer/Footer";
+import Header from "../../components/Index.page/Header";
+import Footer from "../../components/Index.page/Footer";
 import { fixDateFormat } from "../../../lib/fixDateFormat";
 
 export const getStaticProps: GetStaticProps = async () => {
