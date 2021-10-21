@@ -1,22 +1,13 @@
-import { client } from "../../../../lib/client";
-import type { NextPage } from "next";
-import Header from "../../../components/Index.page/Header";
-import Footer from "../../../components/Index.page/Footer";
 import styles from "./blog.module.css";
+import Header from "src/components/Index.page/Header";
+import Footer from "src/components/Index.page/Footer";
+import type { NextPage } from "next";
+import { Blog } from "src/types/types";
 import { fixDateFormat } from "../../../../lib/fixDateFormat";
-
-type Blogs = {
-  id?: string;
-  title?: string;
-  description?: string;
-  body?: any;
-  image?: any;
-  category?: any;
-  createdAt?: any;
-};
+import { client } from "../../../../lib/client";
 
 type Props = {
-  blogs: Blogs;
+  blogs: Blog;
 };
 
 const BlogId: NextPage<Props> = (props) => {

@@ -1,7 +1,7 @@
-import styles from "../../components/Portfolio/Portfolio.module.css";
-import Header from "../../components/Index.page/Header";
-import Footer from "../../components/Index.page/Footer";
-import PortfolioMain from "../../components/Portfolio";
+import styles from "src/components/Portfolio/Portfolio.module.css";
+import Footer from "src/components/Index.page/Footer";
+import Header from "src/components/Index.page/Header";
+import PortfolioMain from "src/components/Portfolio";
 
 export default function Portfolio() {
   return (

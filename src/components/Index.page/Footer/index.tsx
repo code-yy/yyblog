@@ -1,7 +1,7 @@
-import { FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
-import { SiZenn } from "react-icons/si";
-import Link from "next/link";
 import styles from "./Footer.module.css";
+import Link from "next/link";
+import { SiZenn } from "react-icons/si";
+import { FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
 
 function Footer() {
   return (

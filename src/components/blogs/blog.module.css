@@ -1,0 +1,58 @@
+/* PC */
+@media screen and (min-width: 767px) {
+  .wrap {
+    color: #7b7b7b;
+    width: 700px;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 50px;
+    padding: 30px 0;
+  }
+
+  .blogs {
+    background-color: white;
+    padding-left: 10px;
+  }
+
+  .blogs_title {
+    padding: 20px 0 10px 10px;
+    color: black;
+  }
+
+  .blogs_category {
+    padding-left: 10px;
+  }
+}
+
+/* スマホ */
+@media screen and (max-width: 479px) {
+  .wrap {
+    color: #7b7b7b;
+    margin-bottom: 20px;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 30px;
+    padding: 10px 0;
+  }
+
+  .blogs {
+    background-color: white;
+    padding: 0 15px;
+    font-size: 13px;
+  }
+
+  .blogs_title {
+    padding: 10px 0 0 10px;
+    color: black;
+  }
+
+  .blogs_category {
+    padding-left: 10px;
+  }
+}

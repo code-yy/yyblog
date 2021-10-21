@@ -1,7 +1,7 @@
-import styles from "../../components/Profile/Profile.module.css";
-import Header from "../../components/Index.page/Header";
-import Footer from "../../components/Index.page/Footer";
-import Profile_Main from "../../components/Profile";
+import Header from "src/components/Index.page/Header";
+import Profile_Main from "src/components/Profile";
+import styles from "src/components/Profile/Profile.module.css";
+import Footer from "src/components/Index.page/Footer";
 
 export default function Profile() {
   return (

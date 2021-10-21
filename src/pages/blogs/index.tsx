@@ -1,10 +1,11 @@
-import styles from "./blog.module.css";
-import { client } from "../../../lib/client";
+import styles from "src/components/blogs/blog.module.css";
+import Header from "src/components/Index.page/Header";
+import Footer from "src/components/Index.page/Footer";
 import Link from "next/link";
-import type { GetStaticProps, NextPage } from "next";
-import Header from "../../components/Index.page/Header";
-import Footer from "../../components/Index.page/Footer";
-import { fixDateFormat } from "../../../lib/fixDateFormat";
+import { client } from "../../../lib/client";
+import { GetStaticProps, NextPage } from "next";
+import { Blogs } from "src/types/types";
+import { fixDateFormat } from "lib/fixDateFormat";
 
 export const getStaticProps: GetStaticProps = async () => {
   const blogs = await client.get({ endpoint: "blogs" });
@@ -17,7 +18,7 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 type Props = {
-  blogs: any;
+  blogs: Blogs;
 };
 
 const Blog: NextPage<Props> = (props) => {
@@ -27,7 +28,7 @@ const Blog: NextPage<Props> = (props) => {
 
       <h2 className={styles.title}>ブログ一覧</h2>
 
-      {props.blogs.contents.map((blogs: any, index: any, tags: any) => {
+      {props.blogs.contents.map((blogs: any, index: any) => {
         return (
           <div key={index} className={styles.wrap}>
             <div className={styles.blogs}>

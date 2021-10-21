@@ -1,7 +1,7 @@
-import styles from "../styles/Home.module.css";
-import Header from "../components/Index.page/Header";
-import Main from "../components/Index.page/Main";
-import Footer from "../components/Index.page/Footer";
+import styles from "src/styles/Home.module.css";
+import Footer from "src/components/Index.page/Footer";
+import Header from "src/components/Index.page/Header";
+import Main from "src/components/Index.page/Main";
 
 const Home = () => {
   return (
