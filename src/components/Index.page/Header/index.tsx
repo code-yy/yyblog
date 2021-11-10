@@ -44,11 +44,11 @@ const Header = ({ title = "YutoBlog" }: Props) => {
                 <li>Blog</li>
               </a>
             </Link>
-            <Link href="/zenn">
+            {/* <Link href="/zenn">
               <a>
                 <li>zenn</li>
               </a>
-            </Link>
+            </Link> */}
           </ul>
         </nav>
       </header>
