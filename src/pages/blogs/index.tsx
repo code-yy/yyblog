@@ -25,9 +25,7 @@ const Blog: NextPage<Props> = (props) => {
   return (
     <div className={styles.container}>
       <Header title="Blog || YutoBlog" />
-
       <h2 className={styles.title}>ブログ一覧</h2>
-
       {props.blogs.contents.map((blogs: any, index: any) => {
         return (
           <div key={index} className={styles.wrap}>
@@ -48,6 +46,7 @@ const Blog: NextPage<Props> = (props) => {
           </div>
         );
       })}
+
       <Footer />
     </div>
   );
