@@ -1,6 +1,6 @@
 import styles from "./blog.module.css";
-import Header from "src/components/Index.page/Header";
-import Footer from "src/components/Index.page/Footer";
+import Header from "src/components/Home/Header";
+import Footer from "src/components/Home/Footer";
 import type { NextPage } from "next";
 import { Blog } from "src/types/types";
 import { fixDateFormat } from "../../../../lib/fixDateFormat";

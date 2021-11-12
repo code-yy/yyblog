@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import Header from "src/components/Index.page/Header";
+import Header from "src/components/Home/Header";
 import Parser from "rss-parser";
 
 export const Zenn: any = () => {

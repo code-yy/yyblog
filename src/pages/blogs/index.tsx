@@ -1,6 +1,6 @@
 import styles from "src/components/blogs/blog.module.css";
-import Header from "src/components/Index.page/Header";
-import Footer from "src/components/Index.page/Footer";
+import Header from "src/components/Home/Header";
+import Footer from "src/components/Home/Footer";
 import Link from "next/link";
 import { client } from "../../../lib/client";
 import { GetStaticProps, NextPage } from "next";

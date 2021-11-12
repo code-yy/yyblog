@@ -1,7 +1,7 @@
-import Header from "src/components/Index.page/Header";
+import Header from "src/components/Home/Header";
 import Profile_Main from "src/components/Profile";
 import styles from "src/components/Profile/Profile.module.css";
-import Footer from "src/components/Index.page/Footer";
+import Footer from "src/components/Home/Footer";
 
 export default function Profile() {
   return (
