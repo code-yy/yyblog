@@ -4,7 +4,7 @@ import { fixDateFormat } from "../../../../lib/fixDateFormat";
 import { client } from "../../../../lib/client";
 import Header from "src/components/Header";
 import { Footer } from "src/components/Footer";
-import { Profile } from "src/components/Profile";
+import { Profiles } from "src/components/Profiles";
 
 type Props = {
   portfolio: any;
@@ -46,7 +46,7 @@ const PortfolioID: NextPage<Props> = (props) => {
             </div>
           </div>
           <div className="mt-6">
-            <Profile />
+            <Profiles />
           </div>
         </div>
       </main>

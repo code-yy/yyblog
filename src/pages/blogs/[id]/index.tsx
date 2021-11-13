@@ -5,7 +5,7 @@ import { client } from "../../../../lib/client";
 import Header from "src/components/Header";
 import { Footer } from "src/components/Footer";
 import { Blog } from "src/types/types";
-import { Profile } from "src/components/Profile";
+import { Profiles } from "src/components/Profiles";
 
 type Props = {
   blogs: Blog;
@@ -47,7 +47,7 @@ const BlogId: NextPage<Props> = (props) => {
             </div>
           </div>
           <div className="mt-6">
-            <Profile />
+            <Profiles />
           </div>
         </div>
       </main>
