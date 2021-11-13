@@ -18,6 +18,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.15",
     "@mui/material": "^5.0.3",
+    "@tailwindcss/typography": "^0.4.1",
     "framer-motion": "^4.1.17",
     "microcms-js-sdk": "^1.2.0",
     "next": "11.1.2",
