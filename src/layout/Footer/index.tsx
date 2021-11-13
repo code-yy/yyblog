@@ -4,8 +4,8 @@ import { FaGithub, FaTwitter } from "react-icons/fa";
 
 function Footer() {
   return (
-    <footer className="bg-gray-700 text-center text-gray-50 py-9">
-      <div className="text-6xl flex justify-center">
+    <footer className="bg-gray-700 text-center text-gray-50 py-7">
+      <div className="text-4xl flex justify-center">
         <Link href="https://github.com/Utopia300">
           <a className="mr-7">
             <FaGithub />
