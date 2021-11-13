@@ -32,7 +32,7 @@ export const Profiles = () => {
             </a>
           </Link>
           {/* Profile */}
-          <Link href="/profile">
+          <Link href="/Profile">
             <a className="items-center flex shadow rounded bg-red-300 py-2 px-7 my-6 hover:bg-red-200">
               <i className="ri-profile-line mr-2 text-2xl text-red-500"></i>
               <div className="text-xl">Profile</div>
