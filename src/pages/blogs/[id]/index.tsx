@@ -27,7 +27,7 @@ const BlogId: NextPage<Props> = (props) => {
               <img src={props.blogs.image.url} alt="" className={styles.blog_image} />
               <div className={styles.blog_container}>
                 <div
-                  className={styles.blog_body}
+                  className="prose text-left"
                   dangerouslySetInnerHTML={{
                     __html: props.blogs.body,
                   }}
