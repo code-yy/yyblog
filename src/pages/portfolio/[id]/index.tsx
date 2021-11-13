@@ -4,27 +4,26 @@ import { fixDateFormat } from "../../../../lib/fixDateFormat";
 import { client } from "../../../../lib/client";
 import Header from "src/components/Header";
 import { Footer } from "src/components/Footer";
-import { Blog } from "src/types/types";
 import { Profile } from "src/components/Profile";
 
 type Props = {
-  blogs: Blog;
+  portfolio: any;
 };
 
-const BlogId: NextPage<Props> = (props) => {
+const PortfolioID: NextPage<Props> = (props) => {
   return (
     <div>
-      <Header title={`${props.blogs.title} || YutoBlog`} />
+      <Header title={`${props.portfolio.title} || YutoBlog`} />
       <main>
         <div className="flex justify-center">
           <div className="block shadow rounded bg-gray-200 py-5 px-7 my-6">
             {/* ブログタイトル */}
             <h1 className="items-center text-center max-w-4xl mx-auto text-3xl font-bold">
-              {props.blogs.title}
+              {props.portfolio.title}
             </h1>
             <img
-              src={props.blogs.image.url}
-              alt={props.blogs.image.url}
+              src={props.portfolio.image.url}
+              alt={props.portfolio.image.url}
               width={700}
               className="py-3 block object-cover heigth-auto mx-auto"
             />
@@ -33,14 +32,14 @@ const BlogId: NextPage<Props> = (props) => {
               <div>
                 <i className="ri-history-line"></i>
               </div>
-              <div>{fixDateFormat(props.blogs.createdAt)}</div>
+              <div>{fixDateFormat(props.portfolio.createdAt)}</div>
             </div>
             <div>
               <div>
                 <div
                   className="prose text-left"
                   dangerouslySetInnerHTML={{
-                    __html: props.blogs.body,
+                    __html: props.portfolio.body,
                   }}
                 />
               </div>
@@ -56,23 +55,23 @@ const BlogId: NextPage<Props> = (props) => {
   );
 };
 
-export default BlogId;
+export default PortfolioID;
 
 export const getStaticPaths = async () => {
-  const data: any = await client.get({ endpoint: "blogs" });
+  const data: any = await client.get({ endpoint: "portfolio" });
 
-  const paths = data.contents.map((content: any) => `/blogs/${content.id}`);
+  const paths = data.contents.map((content: any) => `/portfolio/${content.id}`);
   return { paths, fallback: false };
 };
 
 // データをテンプレートに受け渡す部分の処理を記述します
 export const getStaticProps = async (context: any) => {
   const id = context.params.id;
-  const data = await client.get({ endpoint: "blogs", contentId: id });
+  const data = await client.get({ endpoint: "portfolio", contentId: id });
 
   return {
     props: {
-      blogs: data,
+      portfolio: data,
     },
   };
 };

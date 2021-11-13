@@ -1,9 +1,9 @@
 import { GetStaticProps, NextPage } from "next";
 import Link from "next/link";
-import Header from "src/layout/Header";
-import { Footer } from "src/layout/Footer";
+import Header from "src/components/Header";
+import { Footer } from "src/components/Footer";
 import { Blogs } from "src/types/types";
-import { Profile } from "src/layout/Profile";
+import { Profile } from "src/components/Profile";
 import { Card } from "src/components/Card";
 import { fixDateFormat } from "lib/fixDateFormat";
 import { client } from "lib/client";

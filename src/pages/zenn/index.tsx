@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import Parser from "rss-parser";
-import Header from "src/layout/Header";
+import Header from "src/components/Header";
 
 export const Zenn: any = () => {
   const [zenn, setZenn] = useState([]);
