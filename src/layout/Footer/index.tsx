@@ -2,7 +2,7 @@ import Link from "next/link";
 import { SiZenn } from "react-icons/si";
 import { FaGithub, FaTwitter } from "react-icons/fa";
 
-function Footer() {
+export const Footer = () => {
   return (
     <footer className="bg-gray-700 text-center text-gray-50 py-5">
       <div className="text-4xl items-center flex justify-center">
@@ -24,6 +24,4 @@ function Footer() {
       </div>
     </footer>
   );
-}
-
-export default Footer;
+};

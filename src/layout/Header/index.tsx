@@ -5,7 +5,7 @@ type Props = {
   title?: string;
 };
 
-const Header = ({ title = "YutoBlog" }: Props) => {
+export const Header = ({ title = "YutoBlog" }: Props) => {
   return (
     <div>
       <Head>
@@ -14,11 +14,9 @@ const Header = ({ title = "YutoBlog" }: Props) => {
 
       <header className="bg-gray-700 text-center text-gray-50 py-3">
         <Link href="/">
-          <a className="text-4xl items-center">YY</a>
+          <a className="text-4xl items-center font-bold">YY</a>
         </Link>
       </header>
     </div>
   );
 };
-
-export default Header;
