@@ -5,7 +5,7 @@ type Props = {
   title?: string;
 };
 
-export const Header = ({ title = "YutoBlog" }: Props) => {
+const Header = ({ title = "YutoBlog" }: Props) => {
   return (
     <div>
       <Head>
@@ -20,3 +20,5 @@ export const Header = ({ title = "YutoBlog" }: Props) => {
     </div>
   );
 };
+
+export default Header;
