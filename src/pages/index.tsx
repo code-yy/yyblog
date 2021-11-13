@@ -2,7 +2,6 @@ import { client } from "lib/client";
 import { GetStaticProps, NextPage } from "next";
 import Footer from "src/layout/Footer";
 import Header from "src/layout/Header";
-import styles from "src/styles/Home.module.css";
 import { Blogs } from "src/types/types";
 import Link from "next/link";
 import { fixDateFormat } from "lib/fixDateFormat";
@@ -25,7 +24,7 @@ type Props = {
 
 const Home: NextPage<Props> = (props: any) => {
   return (
-    <div>
+    <div className="bg-gray-100">
       <Header title="YutoBlog" />
       <Card />
       <div className="container flex justify-center mx-auto">
@@ -34,20 +33,15 @@ const Home: NextPage<Props> = (props: any) => {
             <h1 className="text-center text-3xl font-bold">Blogs</h1>
             {props.blogs.contents.map((blogs: any, index: any) => {
               return (
-                <div
-                  key={index}
-                  className="max-w-3xl mx-auto p-5 mt-3 font-bold truncate border-4 border-gray-200 border-opacity-5 bg-gray-100 rounded"
-                >
-                  {/* 日付を表示 */}
-                  <div className={styles.blogs_category}>{fixDateFormat(blogs.createdAt)}</div>
-                  <div>
-                    {/* タイトルを表示 */}
-                    <Link href={`/blogs/${blogs.id}`}>
-                      <a>
-                        <h3 className={styles.blogs_title}>{blogs.title}</h3>
-                      </a>
-                    </Link>
-                  </div>
+                <div key={index} className="max-w-3xl mx-auto">
+                  <Link href={`/blogs/${blogs.id}`}>
+                    <a>
+                      <div className="px-5 py-3 mt-3 truncate border-4 border-gray-200 border-opacity-5 bg-gray-100 rounded  hover:bg-gray-300">
+                        <div>{fixDateFormat(blogs.createdAt)}</div>
+                        <h3 className="font-bold text-lg pt-1">{blogs.title}</h3>
+                      </div>
+                    </a>
+                  </Link>
                 </div>
               );
             })}

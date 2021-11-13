@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 
 type Props = {
   title?: string;
@@ -12,7 +13,9 @@ const Header = ({ title = "YutoBlog" }: Props) => {
       </Head>
 
       <header className="bg-gray-700 text-center text-gray-50 py-3">
-        <div className="text-4xl items-center">YY</div>
+        <Link href="/">
+          <a className="text-4xl items-center">YY</a>
+        </Link>
       </header>
     </div>
   );
