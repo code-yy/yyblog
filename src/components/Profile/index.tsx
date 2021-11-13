@@ -38,7 +38,7 @@ export const Profile = () => {
               <div className="text-xl">Profile</div>
             </a>
           </Link>
-          <Link href="portfolio">
+          <Link href="/portfolio">
             <a className="items-center flex shadow rounded bg-green-300 py-2 px-7 my-3 hover:bg-green-200">
               <i className="ri-shield-user-line mr-2 text-2xl text-green-500"></i>
               <div className="text-xl">Portfolio</div>
