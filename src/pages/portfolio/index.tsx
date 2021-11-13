@@ -3,7 +3,7 @@ import Link from "next/link";
 import { client } from "lib/client";
 import Header from "src/components/Header";
 import { Footer } from "src/components/Footer";
-import { Profile } from "src/components/Profile";
+import { Profiles } from "src/components/Profiles";
 import { fixDateFormat } from "lib/fixDateFormat";
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -47,7 +47,7 @@ const Portfolio: NextPage = (props: any) => {
           </div>
         </div>
         <div>
-          <Profile />
+          <Profiles />
         </div>
       </div>
       <Footer />

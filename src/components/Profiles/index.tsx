@@ -3,7 +3,7 @@ import { FaGithub, FaTwitter } from "react-icons/fa";
 import { SiZenn } from "react-icons/si";
 import "remixicon/fonts/remixicon.css";
 
-export const Profile = () => {
+export const Profiles = () => {
   return (
     <div>
       <main className="ml-10">

@@ -3,7 +3,7 @@ import Link from "next/link";
 import Header from "src/components/Header";
 import { Footer } from "src/components/Footer";
 import { Blogs } from "src/types/types";
-import { Profile } from "src/components/Profile";
+import { Profiles } from "src/components/Profiles";
 import { Card } from "src/components/Card";
 import { fixDateFormat } from "lib/fixDateFormat";
 import { client } from "lib/client";
@@ -49,7 +49,7 @@ const Home: NextPage<Props> = (props: any) => {
             </div>
           </div>
           <div>
-            <Profile />
+            <Profiles />
           </div>
         </div>
       </div>
