@@ -1,9 +1,9 @@
-import { client } from "lib/client";
 import { GetStaticProps, NextPage } from "next";
-import Footer from "src/layout/Footer";
-import Header from "src/layout/Header";
 import Link from "next/link";
-import Profile from "src/layout/Profile";
+import { client } from "lib/client";
+import { Footer } from "src/layout/Footer";
+import { Header } from "src/layout/Header";
+import { Profile } from "src/layout/Profile";
 
 export const getStaticProps: GetStaticProps = async () => {
   const profile = await client.get({ endpoint: "profile" });
@@ -18,7 +18,7 @@ export const getStaticProps: GetStaticProps = async () => {
 const ProfileBlog: NextPage = (props: any) => {
   return (
     <div>
-      <Header title="YutoBlog || Profile" />
+      <Header title="YY || Profile" />
       <div className="container flex justify-center mx-auto mt-10">
         <div className="block shadow rounded bg-gray-200 py-5 px-10 mb-5">
           <h1 className="text-center text-3xl font-bold">Profile</h1>;
