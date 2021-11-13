@@ -1,7 +1,7 @@
-import styles from "./blog.module.css";
-import Header from "src/components/Home/Header";
-import Footer from "src/components/Home/Footer";
 import type { NextPage } from "next";
+import styles from "./blog.module.css";
+import Header from "src/layout/Header";
+import Footer from "src/layout/Footer";
 import { Blog } from "src/types/types";
 import { fixDateFormat } from "../../../../lib/fixDateFormat";
 import { client } from "../../../../lib/client";

@@ -1,10 +1,10 @@
-import styles from "src/components/blogs/blog.module.css";
-import Header from "src/components/Home/Header";
-import Footer from "src/components/Home/Footer";
-import Link from "next/link";
-import { client } from "../../../lib/client";
 import { GetStaticProps, NextPage } from "next";
+import Link from "next/link";
+import styles from "src/components/blogs/blog.module.css";
+import Header from "src/layout/Header";
+import Footer from "src/layout/Footer";
 import { Blogs } from "src/types/types";
+import { client } from "../../../lib/client";
 import { fixDateFormat } from "lib/fixDateFormat";
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -46,7 +46,6 @@ const Blog: NextPage<Props> = (props) => {
           </div>
         );
       })}
-
       <Footer />
     </div>
   );
