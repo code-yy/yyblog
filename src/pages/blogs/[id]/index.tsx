@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import "remixicon/fonts/remixicon.css";
 import { fixDateFormat } from "../../../../lib/fixDateFormat";
 import { client } from "../../../../lib/client";
-import { Header } from "src/layout/Header";
+import Header from "src/layout/Header";
 import { Footer } from "src/layout/Footer";
 import { Blog } from "src/types/types";
 import { Profile } from "src/layout/Profile";

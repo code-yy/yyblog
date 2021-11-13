@@ -1,7 +1,7 @@
 import { GetStaticProps, NextPage } from "next";
 import Link from "next/link";
+import Header from "src/layout/Header";
 import { Footer } from "src/layout/Footer";
-import { Header } from "src/layout/Header";
 import { Blogs } from "src/types/types";
 import { Profile } from "src/layout/Profile";
 import { Card } from "src/components/Card";

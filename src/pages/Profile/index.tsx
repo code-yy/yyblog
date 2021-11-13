@@ -1,8 +1,8 @@
 import { GetStaticProps, NextPage } from "next";
 import Link from "next/link";
 import { client } from "lib/client";
+import Header from "src/layout/Header";
 import { Footer } from "src/layout/Footer";
-import { Header } from "src/layout/Header";
 import { Profile } from "src/layout/Profile";
 
 export const getStaticProps: GetStaticProps = async () => {
