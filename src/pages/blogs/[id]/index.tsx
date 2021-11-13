@@ -1,10 +1,11 @@
 import type { NextPage } from "next";
-import styles from "./blog.module.css";
-import Header from "src/layout/Header";
-import Footer from "src/layout/Footer";
-import { Blog } from "src/types/types";
+import "remixicon/fonts/remixicon.css";
 import { fixDateFormat } from "../../../../lib/fixDateFormat";
 import { client } from "../../../../lib/client";
+import { Header } from "src/layout/Header";
+import { Footer } from "src/layout/Footer";
+import { Blog } from "src/types/types";
+import { Profile } from "src/layout/Profile";
 
 type Props = {
   blogs: Blog;
@@ -12,20 +13,30 @@ type Props = {
 
 const BlogId: NextPage<Props> = (props) => {
   return (
-    <div className={styles.container}>
+    <div>
       <Header title={`${props.blogs.title} || YutoBlog`} />
       <main>
-        {/* blog */}
-        <div className={styles.wrapper}>
-          <div className={styles.blogs}>
-            <h1 className={styles.title}>{props.blogs.title}</h1>
-            <div className={styles.createdAt}>
-              {fixDateFormat(props.blogs.createdAt)}
-              <br />#{props.blogs.category[0]} #{props.blogs.category[1]} #{props.blogs.category[2]}
+        <div className="flex justify-center">
+          <div className="block shadow rounded bg-gray-200 py-5 px-7 my-6">
+            {/* ブログタイトル */}
+            <h1 className="items-center text-center max-w-4xl mx-auto text-3xl font-bold">
+              {props.blogs.title}
+            </h1>
+            <img
+              src={props.blogs.image.url}
+              alt={props.blogs.image.url}
+              width={700}
+              className="py-3 block object-cover heigth-auto mx-auto"
+            />
+            {/* ブログ公開日時 */}
+            <div className="flex">
+              <div>
+                <i className="ri-history-line"></i>
+              </div>
+              <div>{fixDateFormat(props.blogs.createdAt)}</div>
             </div>
-            <div className={styles.body}>
-              <img src={props.blogs.image.url} alt="" className={styles.blog_image} />
-              <div className={styles.blog_container}>
+            <div>
+              <div>
                 <div
                   className="prose text-left"
                   dangerouslySetInnerHTML={{
@@ -34,6 +45,9 @@ const BlogId: NextPage<Props> = (props) => {
                 />
               </div>
             </div>
+          </div>
+          <div className="mt-6">
+            <Profile />
           </div>
         </div>
       </main>
