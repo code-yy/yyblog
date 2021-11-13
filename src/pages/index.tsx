@@ -1,7 +1,7 @@
+import Footer from "src/layout/Footer";
+import Header from "src/layout/Header";
+import Main from "src/layout/Main";
 import styles from "src/styles/Home.module.css";
-import Footer from "src/components/Home/Footer";
-import Header from "src/components/Home/Header";
-import Main from "src/components/Home/Main";
 
 const Home = () => {
   return (

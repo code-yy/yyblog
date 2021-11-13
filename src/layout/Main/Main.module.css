@@ -16,7 +16,7 @@
     width: 400px;
     height: 400px;
     border-radius: 50%;
-    background-image: url("../../../../public/image/IMG_2008.JPG");
+    background-image: url("/image/IMG_2008.JPG");
     background-size: cover;
   }
 
@@ -70,7 +70,7 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background-image: url("../../../../public/image/IMG_2008.JPG");
+    background-image: url("/image/IMG_2008.JPG");
     background-size: cover;
   }
 
