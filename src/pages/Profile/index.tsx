@@ -21,7 +21,7 @@ const Profile: NextPage = (props: any) => {
       <Header title="Yutopage || Profile" />
       <div className="container flex justify-center mx-auto mt-10">
         <div className="block shadow rounded bg-gray-200 py-5 px-10 mb-5">
-          <h1 className="text-center text-3xl font-bold">Profile</h1>;
+          <h1 className="text-center text-3xl font-bold">Profile</h1>
           <div>
             {props.profile.contents.map((profile: any, index: any) => {
               return (
