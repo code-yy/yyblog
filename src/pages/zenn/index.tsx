@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
 import Parser from "rss-parser";
-import Header from "src/components/Header";
 
 export const Zenn: any = () => {
   const [zenn, setZenn] = useState([]);
@@ -18,11 +17,7 @@ export const Zenn: any = () => {
     getZenn();
   }, [getZenn]);
 
-  return (
-    <div>
-      <Header />
-    </div>
-  );
+  return <div></div>;
 };
 
 export default Zenn;

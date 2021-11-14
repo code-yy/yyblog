@@ -1,9 +1,8 @@
 import type { NextPage } from "next";
+import Head from "next/head";
 import "remixicon/fonts/remixicon.css";
 import { fixDateFormat } from "../../../../lib/fixDateFormat";
 import { client } from "../../../../lib/client";
-import Header from "src/components/Header";
-import { Footer } from "src/components/Footer";
 import { Profiles } from "src/components/Profiles";
 
 type Props = {
@@ -13,7 +12,9 @@ type Props = {
 const PortfolioID: NextPage<Props> = (props) => {
   return (
     <div>
-      <Header title={`${props.portfolio.title} || YutoBlog`} />
+      <Head>
+        <title>Portfolio | {props.portfolio.title}</title>
+      </Head>
       <main>
         <div className="flex justify-center">
           <div className="block shadow rounded bg-gray-200 py-5 px-7 my-6">
@@ -50,7 +51,6 @@ const PortfolioID: NextPage<Props> = (props) => {
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   );
 };

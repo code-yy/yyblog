@@ -1,9 +1,8 @@
 import type { NextPage } from "next";
+import Head from "next/head";
 import "remixicon/fonts/remixicon.css";
 import { fixDateFormat } from "../../../../lib/fixDateFormat";
 import { client } from "../../../../lib/client";
-import Header from "src/components/Header";
-import { Footer } from "src/components/Footer";
 import { Blog } from "src/types/types";
 import { Profiles } from "src/components/Profiles";
 
@@ -14,7 +13,9 @@ type Props = {
 const BlogId: NextPage<Props> = (props) => {
   return (
     <div>
-      <Header title={`${props.blogs.title} || YutoBlog`} />
+      <Head>
+        <title>Blogs | {props.blogs.title}</title>
+      </Head>
       <main>
         <div className="flex justify-center">
           <div className="block shadow rounded bg-gray-200 py-5 px-7 my-6">
@@ -51,7 +52,6 @@ const BlogId: NextPage<Props> = (props) => {
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   );
 };

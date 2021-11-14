@@ -1,9 +1,8 @@
 import { GetStaticProps, NextPage } from "next";
+import Head from "next/head";
 import Link from "next/link";
 import { client } from "lib/client";
-import Header from "src/components/Header";
-import { Footer } from "src/components/Footer";
-import { Profiles as YutoProfile } from "src/components/Profiles";
+import { Profiles } from "src/components/Profiles";
 
 export const getStaticProps: GetStaticProps = async () => {
   const profile = await client.get({ endpoint: "profile" });
@@ -18,7 +17,9 @@ export const getStaticProps: GetStaticProps = async () => {
 const Profile: NextPage = (props: any) => {
   return (
     <div>
-      <Header title="Yutopage || Profile" />
+      <Head>
+        <title>Profile</title>
+      </Head>
       <div className="container flex justify-center mx-auto mt-10">
         <div className="block shadow rounded bg-gray-200 py-5 px-10 mb-5">
           <h1 className="text-center text-3xl font-bold">Profile</h1>
@@ -49,10 +50,9 @@ const Profile: NextPage = (props: any) => {
           </div>
         </div>
         <div>
-          <YutoProfile />
+          <Profiles />
         </div>
       </div>
-      <Footer />
     </div>
   );
 };
