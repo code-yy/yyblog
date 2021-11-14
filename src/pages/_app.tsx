@@ -1,11 +1,12 @@
 import "tailwindcss/tailwind.css";
 import "../styles/globals.css";
 import { AppProps } from "next/app";
+import { Layout } from "src/Layout";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className="bg-gray-100">
+    <Layout>
       <Component {...pageProps} />
-    </div>
+    </Layout>
   );
 }

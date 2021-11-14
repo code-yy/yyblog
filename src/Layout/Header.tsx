@@ -1,18 +1,9 @@
-import Head from "next/head";
 import Link from "next/link";
 import "remixicon/fonts/remixicon.css";
 
-type Props = {
-  title?: string;
-};
-
-const Header = ({ title = "YutoBlog" }: Props) => {
+export const Header = () => {
   return (
     <div>
-      <Head>
-        <title>{title}</title>
-      </Head>
-
       <header className="bg-gray-700 text-gray-50 py-3 flex justify-evenly items-center">
         <Link href="/">
           <a>
@@ -29,5 +20,3 @@ const Header = ({ title = "YutoBlog" }: Props) => {
     </div>
   );
 };
-
-export default Header;
