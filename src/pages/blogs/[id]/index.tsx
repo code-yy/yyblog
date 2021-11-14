@@ -15,6 +15,7 @@ const BlogId: NextPage<Props> = (props) => {
     <div>
       <Head>
         <title>Blogs | {props.blogs.title}</title>
+        <link rel="icon" href="/Profile/アルカ.PNG" />
       </Head>
       <main>
         <div className="flex justify-center">

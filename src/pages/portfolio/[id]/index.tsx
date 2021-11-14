@@ -14,6 +14,7 @@ const PortfolioID: NextPage<Props> = (props) => {
     <div>
       <Head>
         <title>Portfolio | {props.portfolio.title}</title>
+        <link rel="icon" href="/Profile/アルカ.PNG" />
       </Head>
       <main>
         <div className="flex justify-center">

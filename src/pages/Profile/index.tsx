@@ -19,6 +19,7 @@ const Profile: NextPage = (props: any) => {
     <div>
       <Head>
         <title>Profile</title>
+        <link rel="icon" href="/Profile/アルカ.PNG" />
       </Head>
       <div className="container flex justify-center mx-auto mt-10">
         <div className="block shadow rounded bg-gray-200 py-5 px-10 mb-5">

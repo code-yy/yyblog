@@ -21,11 +21,12 @@ type Props = {
   blogs: Blogs;
 };
 
-const Home: NextPage<Props> = (props: any) => {
+const Home: NextPage<Props> = (props: any, { title }) => {
   return (
     <div>
       <Head>
         <title>Yutopage</title>
+        <link rel="icon" href="/Profile/アルカ.PNG" />
       </Head>
       <Card />
       <div className="flex justify-center">
