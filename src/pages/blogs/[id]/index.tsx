@@ -1,48 +1,61 @@
-import type { NextPage } from "next";
+import cheerio from "cheerio";
+import hljs from "highlight.js";
+import "highlight.js/styles/night-owl.css";
 import Head from "next/head";
-import "remixicon/fonts/remixicon.css";
 import { fixDateFormat } from "../../../../lib/fixDateFormat";
-import { client } from "../../../../lib/client";
-import { Blog } from "src/types/types";
 import { Profiles } from "src/components/Profiles";
+import "remixicon/fonts/remixicon.css";
+import { client } from "../../../../lib/client";
 
 type Props = {
-  blogs: Blog;
+  blog: {
+    id: string;
+    createdAt: string;
+    updatedAt: string;
+    publishedAt: string;
+    revisedAt: string;
+    title: string;
+    tags: any[];
+    body: any;
+    image: {
+      url: string;
+    };
+  };
+  highlightedBody: any;
 };
 
-const BlogId: NextPage<Props> = (props) => {
+const BlogId: React.FC<Props> = ({ blog, highlightedBody }) => {
   return (
     <div>
       <Head>
-        <title>Blogs | {props.blogs.title}</title>
+        <title>Blogs | {blog.title}</title>
         <link rel="icon" href="/Profile/アルカ.PNG" />
       </Head>
       <main>
         <div className="flex justify-center">
           <div className="block shadow rounded bg-gray-200 py-5 px-7 my-6">
-            {/* ブログタイトル */}
             <h1 className="items-center text-center max-w-4xl mx-auto text-3xl font-bold">
-              {props.blogs.title}
+              {blog.title}
             </h1>
             <img
-              src={props.blogs.image.url}
-              alt={props.blogs.image.url}
+              src={blog.image.url}
+              alt={blog.image.url}
               width={700}
               className="py-3 block object-cover heigth-auto mx-auto"
             />
-            {/* ブログ公開日時 */}
+
             <div className="flex">
               <div>
                 <i className="ri-history-line"></i>
               </div>
-              <div>{fixDateFormat(props.blogs.createdAt)}</div>
+              <div>{fixDateFormat(blog.createdAt)}</div>
             </div>
             <div>
               <div>
                 <div
                   className="prose text-left"
                   dangerouslySetInnerHTML={{
-                    __html: props.blogs.body,
+                    __html: highlightedBody,
                   }}
                 />
               </div>
@@ -57,23 +70,40 @@ const BlogId: NextPage<Props> = (props) => {
   );
 };
 
-export default BlogId;
-
 export const getStaticPaths = async () => {
-  const data: any = await client.get({ endpoint: "blogs" });
+  const key: any = {
+    headers: { "X-API-KEY": process.env.API_KEY },
+  };
 
-  const paths = data.contents.map((content: any) => `/blogs/${content.id}`);
+  const res = await fetch("https://yutoblog.microcms.io/api/v1/blogs", key);
+  const repos = await res.json();
+
+  const paths: any = repos.contents.map((repo: any) => `/blogs/${repo.id}`);
   return { paths, fallback: false };
 };
 
-// データをテンプレートに受け渡す部分の処理を記述します
 export const getStaticProps = async (context: any) => {
   const id = context.params.id;
-  const data = await client.get({ endpoint: "blogs", contentId: id });
 
+  const key: any = {
+    headers: { "X-API-KEY": process.env.API_KEY },
+  };
+
+  const res = await fetch(`https://yutoblog.microcms.io/api/v1/blogs/${id}`, key);
+  const blog = await res.json();
+  const $ = cheerio.load(blog.body);
+
+  $("pre code").each((_, elm) => {
+    const result = hljs.highlightAuto($(elm).text());
+    $(elm).html(result.value);
+    $(elm).addClass("hljs");
+  });
   return {
     props: {
-      blogs: data,
+      blog,
+      highlightedBody: $.html(),
     },
   };
 };
+
+export default BlogId;
