@@ -1,9 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import "remixicon/fonts/remixicon.css";
-import { fixDateFormat } from "../../../../lib/fixDateFormat";
-import { client } from "../../../../lib/client";
 import { Profiles } from "src/components/Profiles";
+import { client } from "src/lib/client";
+import { fixDateFormat } from "src/lib/fixDateFormat";
+import "remixicon/fonts/remixicon.css";
 
 type Props = {
   portfolio: any;
