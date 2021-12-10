@@ -15,3 +15,20 @@ export type Blogs = {
   createdAt: string;
   category: string;
 };
+
+export type Props = {
+  blog: {
+    id: string;
+    createdAt: string;
+    updatedAt: string;
+    publishedAt: string;
+    revisedAt: string;
+    title: string;
+    tags: any[];
+    body: any;
+    image: {
+      url: string;
+    };
+  };
+  highlightedBody: any;
+};

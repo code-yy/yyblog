@@ -1,9 +1,9 @@
 import { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import { client } from "lib/client";
+import { client } from "src/lib/client";
 import { Profiles } from "src/components/Profiles";
-import { fixDateFormat } from "lib/fixDateFormat";
+import { fixDateFormat } from "src/lib/fixDateFormat";
 
 export const getStaticProps: GetStaticProps = async () => {
   const portfolio = await client.get({ endpoint: "portfolio" });
