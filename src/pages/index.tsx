@@ -21,7 +21,7 @@ type Props = {
   blogs: Blogs;
 };
 
-const Home: NextPage<Props> = (props: any) => {
+const Home: NextPage<Props> = (props) => {
   return (
     <div>
       <Head>

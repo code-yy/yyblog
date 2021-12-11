@@ -6,6 +6,7 @@ export type Blog = {
   image?: any;
   category?: any;
   createdAt?: any;
+  tags: any;
 };
 
 export type Blogs = {
@@ -18,6 +19,7 @@ export type Blogs = {
   image: {
     url: string;
   };
+  tags: { name: string; id: string }[];
 };
 
 export type Props = {
@@ -36,3 +38,10 @@ export type Props = {
   };
   highlightedBody: any;
 };
+
+export type Tag = {
+  id: string;
+  name: string;
+};
+
+export type Tags = { contents: Tag[] };
