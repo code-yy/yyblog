@@ -14,6 +14,10 @@ export type Blogs = {
   title: string;
   createdAt: string;
   category: string;
+  description: string;
+  image: {
+    url: string;
+  };
 };
 
 export type Props = {
@@ -24,7 +28,7 @@ export type Props = {
     publishedAt: string;
     revisedAt: string;
     title: string;
-    tags: any[];
+    tag: any;
     body: any;
     image: {
       url: string;

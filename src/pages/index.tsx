@@ -8,7 +8,7 @@ import { fixDateFormat } from "src/lib/fixDateFormat";
 import { client } from "src/lib/client";
 
 export const getStaticProps: GetStaticProps = async () => {
-  const blogs = await client.get({ endpoint: "blogs" });
+  const blogs: Blogs = await client.get({ endpoint: "blogs" });
   return {
     props: {
       blogs: blogs,
@@ -30,16 +30,28 @@ const Home: NextPage<Props> = (props: any) => {
       </Head>
       <Card />
       <div className="flex justify-center">
-        <div className="block shadow rounded bg-gray-200 py-5 px-7 mb-5 min-w-[665px] max-w-[665px]">
+        <div className="block shadow rounded bg-gray-200 py-5 px-7 mb-5 min-w-[665px]">
           <h1 className="text-center text-3xl font-bold">Blogs</h1>
+
           {props.blogs.contents.map((blogs: any, index: any) => {
             return (
               <div key={index} className="max-w-3xl mx-auto">
                 <Link href={`/blogs/${blogs.id}`}>
                   <a>
-                    <div className="px-5 py-3 mt-3 truncate border-4 border-gray-200 border-opacity-5 bg-gray-100 rounded  hover:bg-gray-300">
-                      <div>{fixDateFormat(blogs.updatedAt)}</div>
-                      <h3 className="font-bold text-lg pt-1">{blogs.title}</h3>
+                    <div className="flex px-5 py-3 mt-3 truncate border-4 border-gray-200 border-opacity-5 bg-gray-100 rounded  hover:bg-gray-300">
+                      <div>
+                        <img
+                          src={blogs.image.url}
+                          alt={blogs.image.url}
+                          width={150}
+                          className="mx-auto pr-3"
+                        />
+                      </div>
+                      <div>
+                        <div>{fixDateFormat(blogs.updatedAt)}</div>
+                        <h3 className="font-bold text-lg pt-1">{blogs.title}</h3>
+                        <p className="text-sm pt-1">{blogs.description}</p>
+                      </div>
                     </div>
                   </a>
                 </Link>
