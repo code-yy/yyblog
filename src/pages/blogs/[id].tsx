@@ -6,6 +6,7 @@ import cheerio from "cheerio";
 import hljs from "highlight.js";
 import "highlight.js/styles/night-owl.css";
 import "remixicon/fonts/remixicon.css";
+import { Tag } from "src/components/Tag";
 
 const BlogId: React.FC<Props> = ({ blog, highlightedBody }) => {
   return (
@@ -32,6 +33,17 @@ const BlogId: React.FC<Props> = ({ blog, highlightedBody }) => {
                 <i className="ri-refresh-line"></i>
               </div>
               <div>{fixDateFormat(blog.updatedAt)}</div>
+            </div>
+            <div>
+              <ul className="flex items-center">
+                {blog.tag.map((tag: any) => {
+                  return (
+                    <li key={tag}>
+                      <Tag tag={tag.name} />
+                    </li>
+                  );
+                })}
+              </ul>
             </div>
             <div>
               <div>
