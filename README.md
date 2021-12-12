@@ -2,7 +2,7 @@
 
 ## ■URL
 
-https://yuto-page.vercel.app/
+https://yutopage.vercel.app/
 
 <br/>
 
