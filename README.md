@@ -46,7 +46,7 @@ TypeScript を使用した理由は、先程も言った、Next(React)と相性�
 - TypeScript を Next.js で使う際の型定義
 - microCMS から API を取得し、サイトへの表示
 - ブログの更新を vercel が自動更新
-- 
+
 </br>
 
 ## ■ 内容は随時更新
