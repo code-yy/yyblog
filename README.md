@@ -1,4 +1,4 @@
-<h1 align="center"><a href="https://yuto-page.vercel.app/">Yutopage</a></h1><br/>
+<h1 align="center"><a href="https://yutopage.vercel.app/">Yutopage</a></h1><br/>
 
 ## ■URL
 
