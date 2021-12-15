@@ -1,12 +1,11 @@
 import Head from "next/head";
+import { Tag } from "src/components/Tag";
 import { Props } from "src/types/types";
-import { Profiles } from "src/components/Profiles";
 import { fixDateFormat } from "src/lib/fixDateFormat";
 import cheerio from "cheerio";
 import hljs from "highlight.js";
 import "highlight.js/styles/night-owl.css";
 import "remixicon/fonts/remixicon.css";
-import { Tag } from "src/components/Tag";
 
 const BlogId: React.FC<Props> = ({ blog, highlightedBody }) => {
   return (
@@ -17,7 +16,7 @@ const BlogId: React.FC<Props> = ({ blog, highlightedBody }) => {
       </Head>
       <main>
         <div className="flex justify-center">
-          <div className="block shadow rounded bg-gray-200 py-5 px-7 my-6 min-w-[700px]">
+          <div>
             <h1 className="items-center text-center max-w-4xl mx-auto text-3xl font-bold">
               {blog.title}
             </h1>
@@ -55,9 +54,6 @@ const BlogId: React.FC<Props> = ({ blog, highlightedBody }) => {
                 />
               </div>
             </div>
-          </div>
-          <div className="mt-6">
-            <Profiles />
           </div>
         </div>
       </main>

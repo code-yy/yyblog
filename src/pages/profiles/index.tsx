@@ -2,7 +2,6 @@ import { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import { client } from "src/lib/client";
-import { Profiles } from "src/components/Profiles";
 
 export const getStaticProps: GetStaticProps = async () => {
   const profile = await client.get({ endpoint: "profile" });
@@ -21,19 +20,17 @@ const Profile: NextPage = (props: any) => {
         <title>Profile</title>
         <link rel="icon" href="/profile/アルカ.PNG" />
       </Head>
-      <div className="container flex justify-center mx-auto mt-10">
-        <div className="block shadow rounded bg-gray-200 py-5 px-10 mb-5">
+      <div className="flex justify-center">
+        <div>
           <h1 className="text-center text-3xl font-bold">Profile</h1>
           <div>
             {props.profile.contents.map((profile: any, index: any) => {
               return (
                 <div
                   key={index}
-                  className="max-w-3xl mx-auto p-5 mt-3 font-bold truncate border-4 border-gray-200 border-opacity-5 bg-gray-100 rounded"
+                  className="max-w-3xl mx-auto p-5 mt-3 font-bold truncate border-1 border-black border-opacity-5 bg-gray-100 rounded"
                 >
-                  {/* 日付を表示 */}
                   <div>
-                    {/* タイトルを表示 */}
                     <Link href={`/profile/${profile.id}`}>
                       <a>
                         <div
@@ -49,9 +46,6 @@ const Profile: NextPage = (props: any) => {
               );
             })}
           </div>
-        </div>
-        <div>
-          <Profiles />
         </div>
       </div>
     </div>

@@ -22,6 +22,16 @@ export type Blogs = {
   tags: { name: string; id: string }[];
 };
 
+export type Portfolio = {
+  title: string;
+  description: string;
+  image: {
+    url: string;
+  };
+  createdAt: string;
+  body: any;
+};
+
 export type Props = {
   blog: {
     id: string;

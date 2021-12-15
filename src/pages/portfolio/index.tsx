@@ -2,7 +2,6 @@ import { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import { client } from "src/lib/client";
-import { Profiles } from "src/components/Profiles";
 import { fixDateFormat } from "src/lib/fixDateFormat";
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -22,22 +21,30 @@ const Portfolio: NextPage = (props: any) => {
         <title>Portfolio</title>
         <link rel="icon" href="/Profile/アルカ.PNG" />
       </Head>
-      <div className="container flex justify-center mx-auto mt-10">
-        <div className="block shadow rounded bg-gray-200 py-5 px-10 mb-5">
+      <div className="flex justify-center">
+        <div>
           <h1 className="text-center text-3xl font-bold">Portfolio</h1>
           <div>
             {props.portfolio.contents.map((portfolio: any, index: any) => {
               return (
-                <div key={index} className="w-3xl mx-auto ">
-                  {/* 日付を表示 */}
+                <div key={index} className="max-w-3xl mx-auto">
                   <div>
-                    {/* タイトルを表示 */}
                     <Link href={`/portfolio/${portfolio.id}`}>
                       <a>
-                        <div className="px-5 py-3 mt-3 truncate border-4 border-gray-200 border-opacity-5 bg-gray-100 rounded  hover:bg-gray-300">
-                          <div>{fixDateFormat(portfolio.createdAt)}</div>
-                          <h1 className="font-bold text-2xl py-2">『{portfolio.title}』</h1>
-                          <p>{portfolio.description}</p>
+                        <div className="flex px-5 py-3 mt-3 text-ellipsis border-1 border-black border-opacity-10 bg-gray-100 rounded  hover:bg-gray-300">
+                          <div>
+                            <img
+                              src={portfolio.image.url}
+                              alt={portfolio.image.url}
+                              width={150}
+                              className="mx-auto pr-3"
+                            />
+                          </div>
+                          <div>
+                            <div>{fixDateFormat(portfolio.createdAt)}</div>
+                            <h1 className="font-bold text-lg pt-1">『{portfolio.title}』</h1>
+                            <p>{portfolio.description}</p>
+                          </div>
                         </div>
                       </a>
                     </Link>
@@ -46,9 +53,6 @@ const Portfolio: NextPage = (props: any) => {
               );
             })}
           </div>
-        </div>
-        <div>
-          <Profiles />
         </div>
       </div>
     </div>

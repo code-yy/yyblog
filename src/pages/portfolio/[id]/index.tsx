@@ -1,12 +1,12 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Profiles } from "src/components/Profiles";
 import { client } from "src/lib/client";
 import { fixDateFormat } from "src/lib/fixDateFormat";
+import { Portfolio } from "src/types/types";
 import "remixicon/fonts/remixicon.css";
 
 type Props = {
-  portfolio: any;
+  portfolio: Portfolio;
 };
 
 const PortfolioID: NextPage<Props> = (props) => {
@@ -18,8 +18,7 @@ const PortfolioID: NextPage<Props> = (props) => {
       </Head>
       <main>
         <div className="flex justify-center">
-          <div className="block shadow rounded bg-gray-200 py-5 px-7 my-6">
-            {/* ブログタイトル */}
+          <div>
             <h1 className="items-center text-center max-w-4xl mx-auto text-3xl font-bold">
               {props.portfolio.title}
             </h1>
@@ -29,7 +28,6 @@ const PortfolioID: NextPage<Props> = (props) => {
               width={700}
               className="py-3 block object-cover heigth-auto mx-auto"
             />
-            {/* ブログ公開日時 */}
             <div className="flex">
               <div>
                 <i className="ri-history-line"></i>
@@ -46,9 +44,6 @@ const PortfolioID: NextPage<Props> = (props) => {
                 />
               </div>
             </div>
-          </div>
-          <div className="mt-6">
-            <Profiles />
           </div>
         </div>
       </main>
