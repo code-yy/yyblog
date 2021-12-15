@@ -1,4 +1,4 @@
-import React from "react";
+import { Profiles } from "src/components/Profiles";
 import { Footer } from "src/Layout/Footer";
 import { Header } from "src/Layout/Header";
 
@@ -6,7 +6,12 @@ export const Layout = (props: any) => {
   return (
     <div className="bg-gray-100">
       <Header />
-      {props.children}
+      <div className="lg:flex lg:justify-center lg:px-64 text-gray-800 my-6">
+        <main className="block lg:mr-4 lg:w-2/3 py-6 bg-gray-200 rounded-lg border border-gray-100 shadow-sm">
+          {props.children}
+        </main>
+        <Profiles />
+      </div>
       <Footer />
     </div>
   );

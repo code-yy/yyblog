@@ -2,7 +2,6 @@ import { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import { client } from "src/lib/client";
-import { Profiles } from "src/components/Profiles";
 import { Tags } from "src/types/types";
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -41,9 +40,6 @@ const Tag: NextPage<Props> = (props) => {
               );
             })}
           </ul>
-        </div>
-        <div>
-          <Profiles />
         </div>
       </div>
     </div>

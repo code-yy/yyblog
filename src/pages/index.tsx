@@ -2,8 +2,6 @@ import { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import { Blogs } from "src/types/types";
-import { Profiles } from "src/components/Profiles";
-import { Card } from "src/components/Card";
 import { fixDateFormat } from "src/lib/fixDateFormat";
 import { client } from "src/lib/client";
 
@@ -28,11 +26,9 @@ const Home: NextPage<Props> = (props) => {
         <title>Yutopage</title>
         <link rel="icon" href="/Profile/アルカ.PNG" />
       </Head>
-      <Card />
       <div className="flex justify-center">
-        <div className="block shadow rounded bg-gray-200 py-5 px-7 mb-5 min-w-[665px]">
+        <div>
           <h1 className="text-center text-3xl font-bold">Blogs</h1>
-
           {props.blogs.contents.map((blogs: any, index: any) => {
             return (
               <div key={index} className="max-w-3xl mx-auto">
@@ -58,9 +54,6 @@ const Home: NextPage<Props> = (props) => {
               </div>
             );
           })}
-        </div>
-        <div>
-          <Profiles />
         </div>
       </div>
     </div>
