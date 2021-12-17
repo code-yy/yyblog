@@ -1,11 +1,11 @@
 import Head from "next/head";
-import { Tag } from "src/components/model/Tag";
 import { Props } from "src/types/types";
+import { Tag } from "src/components/model/Tag";
 import { fixDateFormat } from "src/lib/fixDateFormat";
+import { addClassNames } from "src/lib/addClassNames";
 import cheerio from "cheerio";
-import hljs from "highlight.js";
-import "highlight.js/styles/night-owl.css";
 import "remixicon/fonts/remixicon.css";
+import "highlight.js/styles/hybrid.css";
 
 const BlogId: React.FC<Props> = ({ blog, highlightedBody }) => {
   return (
@@ -86,15 +86,12 @@ export const getStaticProps = async (context: any) => {
   const blog = await res.json();
   const $ = cheerio.load(blog.body);
 
-  $("pre code").each((_, elm) => {
-    const result = hljs.highlightAuto($(elm).text());
-    $(elm).html(result.value);
-    $(elm).addClass("hljs");
-  });
+  const classNamesAddedHtml = addClassNames($);
+
   return {
     props: {
       blog,
-      highlightedBody: $.html(),
+      highlightedBody: classNamesAddedHtml.html(),
     },
   };
 };
