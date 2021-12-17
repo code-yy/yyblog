@@ -17,10 +17,8 @@ const BlogId: React.FC<Props> = ({ blog, highlightedBody }) => {
       <main>
         <div className="flex justify-center">
           <div>
-            <h1 className="items-center text-center max-w-4xl mx-auto text-3xl font-bold">
-              {blog.title}
-            </h1>
-            <img src={blog.image.url} alt={blog.image.url} width={700} className="py-5 mx-auto" />
+            <h1 className="items-center text-center max-w-4xl mx-auto text-3xl font-bold">{blog.title}</h1>
+            <img src={blog.image.url} alt={blog.image.url} width={500} className="py-5 mx-auto" />
             <div className="flex">
               <div>
                 <i className="ri-history-line"></i>
