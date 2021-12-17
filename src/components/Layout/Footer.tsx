@@ -1,8 +1,9 @@
 import Link from "next/link";
+import { VFC } from "react";
 import { SiZenn } from "react-icons/si";
 import { FaGithub, FaTwitter } from "react-icons/fa";
 
-export const Footer = () => {
+export const Footer: VFC = () => {
   return (
     <footer className="bg-gray-700 text-center text-gray-50 py-5">
       <div className="text-4xl items-center flex justify-center">

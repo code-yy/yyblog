@@ -1,7 +1,8 @@
 import Link from "next/link";
+import { VFC } from "react";
 import "remixicon/fonts/remixicon.css";
 
-export const Header = () => {
+export const Header: VFC = () => {
   return (
     <div>
       <header className="bg-gray-700 text-gray-50 py-3 flex justify-around items-center">
