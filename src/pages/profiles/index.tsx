@@ -1,6 +1,7 @@
 import { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
-import Link from "next/link";
+import { Headline } from "src/components/model/Headline";
+import { ProfileCard } from "src/components/page/ProfileCard";
 import { client } from "src/lib/client";
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -22,7 +23,7 @@ const Profile: NextPage = (props: any) => {
       </Head>
       <div className="flex justify-center">
         <div>
-          <h1 className="text-center text-3xl font-bold">Profile</h1>
+          <Headline title={"Profile"} />
           <div>
             {props.profile.contents.map((profile: any, index: any) => {
               return (
@@ -30,18 +31,7 @@ const Profile: NextPage = (props: any) => {
                   key={index}
                   className="max-w-3xl mx-auto p-5 mt-3 font-bold truncate border-1 border-black border-opacity-5 bg-gray-100 rounded"
                 >
-                  <div>
-                    <Link href={`/profile/${profile.id}`}>
-                      <a>
-                        <div
-                          className="prose"
-                          dangerouslySetInnerHTML={{
-                            __html: profile.body,
-                          }}
-                        ></div>
-                      </a>
-                    </Link>
-                  </div>
+                  <ProfileCard profile={profile} />
                 </div>
               );
             })}

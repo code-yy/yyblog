@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Blogs } from "src/types/types";
 import { fixDateFormat } from "src/lib/fixDateFormat";
 import { client } from "src/lib/client";
+import { Headline } from "src/components/model/Headline";
 
 export const getStaticProps: GetStaticProps = async () => {
   const blogs: Blogs = await client.get({ endpoint: "blogs" });
@@ -23,12 +24,12 @@ const Home: NextPage<Props> = (props) => {
   return (
     <div>
       <Head>
-        <title>Yutopage</title>
+        <title>yyblog</title>
         <link rel="icon" href="/Profile/アルカ.PNG" />
       </Head>
       <div className="flex justify-center">
         <div>
-          <h1 className="text-center text-3xl font-bold">Blogs</h1>
+          <Headline title={"Blogs"} />
           {props.blogs.contents.map((blogs: any, index: any) => {
             return (
               <div key={index} className="max-w-3xl mx-auto">

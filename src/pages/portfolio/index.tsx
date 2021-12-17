@@ -1,6 +1,7 @@
 import { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+import { Headline } from "src/components/model/Headline";
 import { client } from "src/lib/client";
 import { fixDateFormat } from "src/lib/fixDateFormat";
 
@@ -23,7 +24,7 @@ const Portfolio: NextPage = (props: any) => {
       </Head>
       <div className="flex justify-center">
         <div>
-          <h1 className="text-center text-3xl font-bold">Portfolio</h1>
+          <Headline title={"Portfolio"} />
           <div>
             {props.portfolio.contents.map((portfolio: any, index: any) => {
               return (
