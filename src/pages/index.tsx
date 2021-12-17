@@ -37,12 +37,7 @@ const Home: NextPage<Props> = (props) => {
                   <a>
                     <div className="flex px-5 py-3 mt-3 truncate border-4 border-gray-200 border-opacity-5 bg-gray-100 rounded  hover:bg-gray-300">
                       <div>
-                        <img
-                          src={blogs.image.url}
-                          alt={blogs.image.url}
-                          width={150}
-                          className="mx-auto pr-3"
-                        />
+                        <img src={blogs.image.url} alt={blogs.image.url} width={150} className="mx-auto pr-3" />
                       </div>
                       <div>
                         <div>{fixDateFormat(blogs.updatedAt)}</div>

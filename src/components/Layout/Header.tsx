@@ -11,11 +11,6 @@ export const Header = () => {
               <i className="ri-home-8-line text-4xl"></i>
             </a>
           </Link>
-          {/* <Link href="/tag">
-            <a>
-              <i className="ri-price-tag-3-line text-4xl"></i>
-            </a>
-          </Link> */}
         </div>
         <h1 className="text-4xl items-center font-bold">YY</h1>
         <Link href="https://github.com/Utopia300/yyblog">

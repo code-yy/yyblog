@@ -27,9 +27,7 @@ export const PortfolioCard: VFC<Props> = (props) => {
           <div className="md:pl-4 w-full md:w-3/4">
             <div>{fixDateFormat(props.portfolio.createdAt)}</div>
             <h2 className="text-lg font-bold">『{props.portfolio.title}』</h2>
-            <p className="text-sm text-gray-700 dark:text-gray-400">
-              {props.portfolio.description}
-            </p>
+            <p className="text-sm text-gray-700 dark:text-gray-400">{props.portfolio.description}</p>
           </div>
         </a>
       </Link>
