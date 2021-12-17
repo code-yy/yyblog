@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Profiles } from "src/components/model/Profile";
+import { Profiles } from "../model/Profile";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 
