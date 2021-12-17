@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Tag } from "src/components/Tag";
+import { Tag } from "src/components/model/Tag";
 import { Props } from "src/types/types";
 import { fixDateFormat } from "src/lib/fixDateFormat";
 import cheerio from "cheerio";
