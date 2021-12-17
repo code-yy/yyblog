@@ -1,8 +1,9 @@
+import { FC } from "react";
 import { Profiles } from "src/components/model/Profile";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 
-export const Layout = (props: any) => {
+export const Layout: FC = (props: any) => {
   return (
     <div className="bg-gray-100">
       <Header />
