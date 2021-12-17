@@ -1,6 +1,6 @@
 import { Profiles } from "src/components/model/Profile";
-import { Footer } from "src/components/Layout/Footer";
-import { Header } from "src/components/Layout/Header";
+import { Footer } from "src/components/layout/Footer";
+import { Header } from "src/components/layout/Header";
 
 export const Layout = (props: any) => {
   return (
