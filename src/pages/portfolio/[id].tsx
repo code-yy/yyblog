@@ -19,9 +19,7 @@ const PortfolioID: NextPage<Props> = (props) => {
       <main>
         <div className="flex justify-center">
           <div>
-            <h1 className="items-center text-center max-w-4xl mx-auto text-3xl font-bold">
-              {props.portfolio.title}
-            </h1>
+            <h1 className="items-center text-center max-w-4xl mx-auto text-3xl font-bold">{props.portfolio.title}</h1>
             <img
               src={props.portfolio.image.url}
               alt={props.portfolio.image.url}
