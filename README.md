@@ -1,8 +1,8 @@
-<h1 align="center"><a href="https://yutopage.vercel.app/">Yutopage</a></h1><br/>
+<h1 align="center"><a href="https://yyblog.vercel.app/">yyblog</a></h1><br/>
 
 ## ■URL
 
-https://yutopage.vercel.app/
+https://yyblog.vercel.app/
 
 <br/>
 
