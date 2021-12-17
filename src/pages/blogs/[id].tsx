@@ -6,8 +6,9 @@ import { addClassNames } from "src/lib/addClassNames";
 import cheerio from "cheerio";
 import "remixicon/fonts/remixicon.css";
 import "highlight.js/styles/hybrid.css";
+import { NextPage } from "next";
 
-const BlogId: React.FC<Props> = ({ blog, highlightedBody }) => {
+const BlogId: NextPage<Props> = ({ blog, highlightedBody }) => {
   return (
     <div>
       <Head>
