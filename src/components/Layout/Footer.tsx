@@ -5,7 +5,7 @@ import { FaGithub, FaTwitter } from "react-icons/fa";
 
 export const Footer: VFC = () => {
   return (
-    <footer className="bg-gray-700 text-center text-gray-50 py-5">
+    <div className="bg-gray-700 text-center text-gray-50 py-5">
       <div className="text-4xl items-center flex justify-center">
         <Link href="https://github.com/Utopia300">
           <a className="mr-3">
@@ -23,6 +23,6 @@ export const Footer: VFC = () => {
           </a>
         </Link>
       </div>
-    </footer>
+    </div>
   );
 };
