@@ -27,31 +27,27 @@ const Home: NextPage<Props> = (props) => {
         <title>yyblog</title>
         <link rel="icon" href="/Profile/アルカ.PNG" />
       </Head>
-      <div className="flex justify-center">
-        <div>
-          <Headline title={"Blogs"} />
-          {props.blogs.contents.map((blogs: any, index: any) => {
-            return (
-              <div key={index} className="max-w-3xl mx-auto">
-                <Link href={`/blogs/${blogs.id}`}>
-                  <a>
-                    <div className="flex px-5 py-3 mt-3 truncate border-4 border-gray-200 border-opacity-5 bg-gray-100 rounded  hover:bg-gray-300">
-                      <div>
-                        <img src={blogs.image.url} alt={blogs.image.url} width={150} className="mx-auto pr-3" />
-                      </div>
-                      <div>
-                        <div>{fixDateFormat(blogs.updatedAt)}</div>
-                        <h3 className="font-bold text-lg pt-1">{blogs.title}</h3>
-                        <p className="text-sm pt-1">{blogs.description}</p>
-                      </div>
-                    </div>
-                  </a>
-                </Link>
-              </div>
-            );
-          })}
-        </div>
-      </div>
+      <Headline title={"Blogs"} />
+      {props.blogs.contents.map((blogs: any, index: any) => {
+        return (
+          <div key={index} className="mb-4 rounded-md border hover:shadow-sm transition bg-gray-50">
+            <Link href={`/blogs/${blogs.id}`}>
+              <a className="block md:flex md:justify-center items-center py-4 w-full">
+                <img
+                  src={blogs.image.url}
+                  alt={blogs.image.url}
+                  className="block object-cover w-full md:w-1/6 min-h-hull border"
+                />
+                <div className="md:pl-4 w-full md:w-3/4">
+                  <div>{fixDateFormat(blogs.updatedAt)}</div>
+                  <h3 className="text-lg font-bold">{blogs.title}</h3>
+                  <p className="text-sm text-gray-700">{blogs.description}</p>
+                </div>
+              </a>
+            </Link>
+          </div>
+        );
+      })}
     </div>
   );
 };
