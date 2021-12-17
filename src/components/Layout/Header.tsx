@@ -18,7 +18,7 @@ export const Header = () => {
           </Link> */}
         </div>
         <h1 className="text-4xl items-center font-bold">YY</h1>
-        <Link href="https://github.com/Utopia300/Yutopage">
+        <Link href="https://github.com/Utopia300/yyblog">
           <a>
             <div className="bg-hero-icon bg-cover p-6 rounded-full"></div>
           </a>
