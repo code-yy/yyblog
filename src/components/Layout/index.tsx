@@ -40,7 +40,7 @@ export const Layout: FC<Props> = (props) => {
 
         {/* Twitter */}
         <meta name="twitter:card" content="Summary Card" />
-        <meta name="twitter:site" content="@mayo1201blog" />
+        <meta name="twitter:site" content="@yuto_yy_76" />
         <meta name="twitter:image" content={meta.ogImagePath} />
 
         {/* PWA */}
