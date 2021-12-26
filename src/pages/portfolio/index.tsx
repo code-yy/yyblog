@@ -1,5 +1,5 @@
 import { GetStaticProps, NextPage } from "next";
-import { Layout } from "src/components/layout/Layout";
+import { Layout } from "src/components/layout";
 import { Headline } from "src/components/model/Headline";
 import { PortfolioCard } from "src/components/page/PortfolioCard";
 import { client } from "src/lib/client";
