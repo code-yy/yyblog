@@ -3,7 +3,7 @@ import { Headline } from "src/components/model/Headline";
 import { addClassNames } from "src/lib/addClassNames";
 import { client } from "src/lib/client";
 import cheerio from "cheerio";
-import { Layout } from "src/components/layout/Lauout";
+import { Layout } from "src/components/layout/Layout";
 
 export const getStaticProps: GetStaticProps = async () => {
   const profile: any = await client.get({ endpoint: "profile" });

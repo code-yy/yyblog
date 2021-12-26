@@ -1,5 +1,5 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
-import { Layout } from "src/components/layout/Lauout";
+import { Layout } from "src/components/layout/Layout";
 import { Tag } from "src/components/model/Tag";
 import { fixDateFormat } from "src/lib/fixDateFormat";
 import { addClassNames } from "src/lib/addClassNames";
