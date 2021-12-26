@@ -1,40 +1,50 @@
-import Head from "next/head";
-import { Props } from "src/types/types";
+import { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import { Layout } from "src/components/layout/Lauout";
 import { Tag } from "src/components/model/Tag";
 import { fixDateFormat } from "src/lib/fixDateFormat";
 import { addClassNames } from "src/lib/addClassNames";
 import cheerio from "cheerio";
 import "remixicon/fonts/remixicon.css";
 import "highlight.js/styles/hybrid.css";
-import { NextPage } from "next";
 
-const BlogId: NextPage<Props> = ({ blog, highlightedBody }) => {
+type Props = {
+  blog: {
+    id: string;
+    createdAt: string;
+    updatedAt: string;
+    title: string;
+    tag: any;
+    body: any;
+    image: {
+      url: string;
+    };
+  };
+  highlightedBody: any;
+};
+
+const BlogId: NextPage<Props> = (props) => {
   return (
-    <div>
-      <Head>
-        <title>Blogs | {blog.title}</title>
-        <link rel="icon" href="/Profile/アルカ.PNG" />
-      </Head>
+    <Layout title={`Blogs | ${props.blog.title}`}>
       <main>
         <div className="flex justify-center">
           <div>
-            <h1 className="items-center text-center max-w-4xl mx-auto text-3xl font-bold">{blog.title}</h1>
-            <img src={blog.image.url} alt={blog.image.url} width={500} className="py-5 mx-auto" />
+            <h1 className="items-center text-center max-w-4xl mx-auto text-3xl font-bold">{props.blog.title}</h1>
+            <img src={props.blog.image.url} alt={props.blog.image.url} width={500} className="py-5 mx-auto" />
             <div className="flex">
               <div>
                 <i className="ri-history-line"></i>
               </div>
-              <div>{fixDateFormat(blog.createdAt)}</div>
+              <div>{fixDateFormat(props.blog.createdAt)}</div>
             </div>
             <div className="flex">
               <div>
                 <i className="ri-refresh-line"></i>
               </div>
-              <div>{fixDateFormat(blog.updatedAt)}</div>
+              <div>{fixDateFormat(props.blog.updatedAt)}</div>
             </div>
             <div>
               <ul className="flex items-center">
-                {blog.tag.map((tag: any) => {
+                {props.blog.tag.map((tag: any) => {
                   return (
                     <li key={tag}>
                       <Tag tag={tag.name} />
@@ -48,7 +58,7 @@ const BlogId: NextPage<Props> = ({ blog, highlightedBody }) => {
                 <div
                   className="prose text-left"
                   dangerouslySetInnerHTML={{
-                    __html: highlightedBody,
+                    __html: props.highlightedBody,
                   }}
                 />
               </div>
@@ -56,13 +66,13 @@ const BlogId: NextPage<Props> = ({ blog, highlightedBody }) => {
           </div>
         </div>
       </main>
-    </div>
+    </Layout>
   );
 };
 
 export default BlogId;
 
-export const getStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {
   const key: any = {
     headers: { "X-API-KEY": process.env.API_KEY },
   };
@@ -74,7 +84,7 @@ export const getStaticPaths = async () => {
   return { paths, fallback: false };
 };
 
-export const getStaticProps = async (context: any) => {
+export const getStaticProps: GetStaticProps = async (context: any) => {
   const id = context.params.id;
 
   const key: any = {

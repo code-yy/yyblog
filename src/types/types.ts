@@ -1,14 +1,4 @@
-export type Blog = {
-  id?: string;
-  title?: string;
-  description?: string;
-  body?: any;
-  image?: any;
-  category?: any;
-  createdAt?: any;
-  tags: any;
-};
-
+// src/index.tsx
 export type Blogs = {
   contents: any;
   id: string;
@@ -22,6 +12,7 @@ export type Blogs = {
   tags: { name: string; id: string }[];
 };
 
+// src/components/page/PortfolioCard.tsx
 export type Portfolio = {
   title: string;
   description: string;
@@ -32,24 +23,9 @@ export type Portfolio = {
   body: any;
 };
 
-export type Props = {
-  blog: {
-    id: string;
-    createdAt: string;
-    updatedAt: string;
-    title: string;
-    tag: any;
-    body: any;
-    image: {
-      url: string;
-    };
-  };
-  highlightedBody: any;
-};
-
+// src/pages/tag
 export type Tag = {
   id: string;
   name: string;
 };
-
 export type Tags = { contents: Tag[] };

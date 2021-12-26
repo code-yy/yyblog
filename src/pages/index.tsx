@@ -1,9 +1,9 @@
 import { GetStaticProps, NextPage } from "next";
-import Head from "next/head";
-import { Blogs } from "src/types/types";
 import { client } from "src/lib/client";
 import { Headline } from "src/components/model/Headline";
 import { BlogCard } from "src/components/page/BlogCard";
+import { Layout } from "src/components/layout/Lauout";
+import { Blogs } from "src/types/types";
 
 export const getStaticProps: GetStaticProps = async () => {
   const blogs: Blogs = await client.get({ endpoint: "blogs" });
@@ -21,11 +21,7 @@ type Props = {
 
 const Home: NextPage<Props> = (props) => {
   return (
-    <div>
-      <Head>
-        <title>yyblog</title>
-        <link rel="icon" href="/Profile/アルカ.PNG" />
-      </Head>
+    <Layout title={"yyblog"}>
       <Headline title={"Blogs"} />
       {props.blogs.contents.map((blogs: any, index: any) => {
         return (
@@ -34,7 +30,7 @@ const Home: NextPage<Props> = (props) => {
           </div>
         );
       })}
-    </div>
+    </Layout>
   );
 };
 

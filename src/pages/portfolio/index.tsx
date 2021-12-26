@@ -1,5 +1,5 @@
 import { GetStaticProps, NextPage } from "next";
-import Head from "next/head";
+import { Layout } from "src/components/layout/Lauout";
 import { Headline } from "src/components/model/Headline";
 import { PortfolioCard } from "src/components/page/PortfolioCard";
 import { client } from "src/lib/client";
@@ -16,11 +16,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
 const Portfolio: NextPage = (props: any) => {
   return (
-    <div>
-      <Head>
-        <title>Portfolio</title>
-        <link rel="icon" href="/Profile/アルカ.PNG" />
-      </Head>
+    <Layout title={"yyblog || Portfolio"}>
       <Headline title={"Portfolio"} />
       <ul>
         {props.portfolio.contents.map((portfolio: any, index: any) => {
@@ -31,7 +27,7 @@ const Portfolio: NextPage = (props: any) => {
           );
         })}
       </ul>
-    </div>
+    </Layout>
   );
 };
 

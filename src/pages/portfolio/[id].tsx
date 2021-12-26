@@ -1,8 +1,8 @@
-import type { NextPage } from "next";
-import Head from "next/head";
+import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { client } from "src/lib/client";
 import { fixDateFormat } from "src/lib/fixDateFormat";
 import { Portfolio } from "src/types/types";
+import { Layout } from "src/components/layout/Lauout";
 import "remixicon/fonts/remixicon.css";
 
 type Props = {
@@ -11,11 +11,7 @@ type Props = {
 
 const PortfolioID: NextPage<Props> = (props) => {
   return (
-    <div>
-      <Head>
-        <title>Portfolio | {props.portfolio.title}</title>
-        <link rel="icon" href="/Profile/アルカ.PNG" />
-      </Head>
+    <Layout title={`Portfolio | ${props.portfolio.title}`}>
       <main>
         <div className="flex justify-center">
           <div>
@@ -45,13 +41,13 @@ const PortfolioID: NextPage<Props> = (props) => {
           </div>
         </div>
       </main>
-    </div>
+    </Layout>
   );
 };
 
 export default PortfolioID;
 
-export const getStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {
   const data: any = await client.get({ endpoint: "portfolio" });
 
   const paths = data.contents.map((content: any) => `/portfolio/${content.id}`);
@@ -59,7 +55,7 @@ export const getStaticPaths = async () => {
 };
 
 // データをテンプレートに受け渡す部分の処理を記述します
-export const getStaticProps = async (context: any) => {
+export const getStaticProps: GetStaticProps = async (context: any) => {
   const id = context.params.id;
   const data = await client.get({ endpoint: "portfolio", contentId: id });
 
