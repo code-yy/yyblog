@@ -1,11 +1,21 @@
 import { FC } from "react";
+import Head from "next/head";
 import { Profiles } from "../model/Profile";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 
-export const Layout: FC = (props: any) => {
+type Props = {
+  children: any;
+  title: string | undefined;
+};
+
+export const Layout: FC<Props> = (props) => {
   return (
     <div className="bg-gray-100">
+      <Head>
+        <title>{props.title}</title>
+        <link rel="icon" href="/Profile/アルカ.PNG" />
+      </Head>
       <header>
         <Header />
       </header>
