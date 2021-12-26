@@ -2,7 +2,7 @@ import { GetStaticProps, NextPage } from "next";
 import { client } from "src/lib/client";
 import { Headline } from "src/components/model/Headline";
 import { BlogCard } from "src/components/page/BlogCard";
-import { Layout } from "src/components/layout";
+import { Layout } from "src/components/Layout";
 import { Blogs } from "src/types/types";
 
 export const getStaticProps: GetStaticProps = async () => {

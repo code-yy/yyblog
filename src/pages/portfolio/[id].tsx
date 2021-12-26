@@ -2,7 +2,7 @@ import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { client } from "src/lib/client";
 import { fixDateFormat } from "src/lib/fixDateFormat";
 import { Portfolio } from "src/types/types";
-import { Layout } from "src/components/layout";
+import { Layout } from "src/components/Layout";
 import "remixicon/fonts/remixicon.css";
 
 type Props = {
