@@ -14,7 +14,7 @@ export const Layout: FC<Props> = (props) => {
     <div className="bg-gray-100">
       <Head>
         <title>{props.title}</title>
-        <link rel="icon" href="/Profile/アルカ.PNG" />
+        <link rel="icon" href="/アルカ.PNG" />
       </Head>
       <header>
         <Header />
