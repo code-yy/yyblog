@@ -12,7 +12,6 @@
     "printWidth": 120
   },
   "dependencies": {
-    "@chakra-ui/react": "^1.6.10",
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.3.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -20,7 +19,6 @@
     "@fortawesome/free-regular-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.15",
-    "@mui/material": "^5.0.3",
     "@tailwindcss/typography": "^0.4.1",
     "cheerio": "^1.0.0-rc.10",
     "framer-motion": "^4.1.17",
@@ -30,9 +28,7 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.3.1",
-    "remixicon": "^2.5.0",
-    "rss-parser": "^3.12.0",
-    "swr": "^1.0.1"
+    "remixicon": "^2.5.0"
   },
   "devDependencies": {
     "@types/node": "^16.10.3",
