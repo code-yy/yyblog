@@ -16,7 +16,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
 const Portfolio: NextPage = (props: any) => {
   return (
-    <Layout title={"yyblog || Portfolio"}>
+    <Layout title={"yyblog | Portfolio"}>
       <Headline title={"Portfolio"} />
       <ul>
         {props.portfolio.contents.map((portfolio: any, index: any) => {

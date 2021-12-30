@@ -18,7 +18,7 @@ type Props = {
 
 const Profile: NextPage<Props> = (props) => {
   return (
-    <Layout title={"yyblog || Profile"}>
+    <Layout title={"yyblog | Profile"}>
       <Headline title={"Profile"} />
       <div className="flex justify-center">
         <article
