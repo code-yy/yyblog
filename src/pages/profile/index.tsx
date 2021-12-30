@@ -1,9 +1,10 @@
+import cheerio from "cheerio";
 import { GetStaticProps, NextPage } from "next";
+
 import { Layout } from "@/components/Layout";
 import { Headline } from "@/components/model/Headline";
 import { addClassNames } from "@/lib/addClassNames";
 import { client } from "@/lib/client";
-import cheerio from "cheerio";
 
 export const getStaticProps: GetStaticProps = async () => {
   const profile: any = await client.get({ endpoint: "profile" });

@@ -5,5 +5,5 @@ type Props = {
 };
 
 export const Headline: VFC<Props> = (props) => {
-  return <h1 className="text-center text-3xl font-bold mb-3">{props.title}</h1>;
+  return <h1 className="mb-3 text-3xl font-bold text-center">{props.title}</h1>;
 };

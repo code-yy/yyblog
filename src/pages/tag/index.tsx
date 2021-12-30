@@ -1,6 +1,7 @@
 import { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+
 import { client } from "src/lib/client";
 import { Tags } from "src/types/types";
 
@@ -27,8 +28,8 @@ const Tag: NextPage<Props> = (props) => {
         <link rel="icon" href="/profile/アルカ.PNG" />
       </Head>
       <div className="container flex justify-center mx-auto mt-10">
-        <div className="block shadow rounded bg-gray-200 py-5 px-10 mb-5 min-w-[665px]">
-          <h1 className="text-center text-3xl font-bold">Tags</h1>
+        <div className="block py-5 px-10 mb-5 min-w-[665px] bg-gray-200 rounded shadow">
+          <h1 className="text-3xl font-bold text-center">Tags</h1>
           <ul className="pl-4 list-disc">
             {props.tags.contents.map((tag, index) => {
               return (

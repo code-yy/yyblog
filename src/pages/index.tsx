@@ -1,4 +1,5 @@
 import { GetStaticProps, NextPage } from "next";
+
 import { Layout } from "@/components/Layout";
 import { Headline } from "@/components/model/Headline";
 import { BlogCard } from "@/components/page/BlogCard";
@@ -25,7 +26,7 @@ const Home: NextPage<Props> = (props) => {
       <Headline title={"Blogs"} />
       {props.blogs.contents.map((blogs: any, index: any) => {
         return (
-          <div key={index} className="mb-4 rounded-md border hover:shadow-sm transition bg-gray-50">
+          <div key={index} className="mb-4 bg-gray-50 rounded-md border hover:shadow-sm transition">
             <BlogCard blogs={blogs} />
           </div>
         );

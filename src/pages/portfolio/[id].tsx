@@ -1,7 +1,8 @@
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
+
 import { Layout } from "@/components/Layout";
-import { fixDateFormat } from "@/lib/fixDateFormat";
 import { client } from "@/lib/client";
+import { fixDateFormat } from "@/lib/fixDateFormat";
 import { Portfolio } from "@/types/types";
 import "remixicon/fonts/remixicon.css";
 
@@ -15,12 +16,12 @@ const PortfolioID: NextPage<Props> = (props) => {
       <main>
         <div className="flex justify-center">
           <div>
-            <h1 className="items-center text-center max-w-4xl mx-auto text-3xl font-bold">{props.portfolio.title}</h1>
+            <h1 className="items-center mx-auto max-w-4xl text-3xl font-bold text-center">{props.portfolio.title}</h1>
             <img
               src={props.portfolio.image.url}
               alt={props.portfolio.image.url}
               width={700}
-              className="py-3 block object-cover heigth-auto mx-auto"
+              className="block object-cover py-3 mx-auto"
             />
             <div className="flex">
               <div>
@@ -31,7 +32,7 @@ const PortfolioID: NextPage<Props> = (props) => {
             <div>
               <div>
                 <div
-                  className="prose text-left"
+                  className="text-left prose"
                   dangerouslySetInnerHTML={{
                     __html: props.portfolio.body,
                   }}

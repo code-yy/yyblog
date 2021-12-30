@@ -1,11 +1,14 @@
-import { GetStaticPaths, GetStaticProps, NextPage } from "next";
-import { Layout } from "@/components/Layout";
-import { fixDateFormat } from "@/lib/fixDateFormat";
-import { Tag } from "@/components/model/Tag";
-import { addClassNames } from "@/lib/addClassNames";
-import "remixicon/fonts/remixicon.css";
 import cheerio from "cheerio";
 import "highlight.js/styles/hybrid.css";
+
+import { GetStaticPaths, GetStaticProps, NextPage } from "next";
+
+import { Layout } from "@/components/Layout";
+import { Tag } from "@/components/model/Tag";
+import { addClassNames } from "@/lib/addClassNames";
+import { fixDateFormat } from "@/lib/fixDateFormat";
+
+import "remixicon/fonts/remixicon.css";
 
 type Props = {
   blog: {
@@ -28,7 +31,7 @@ const BlogId: NextPage<Props> = (props) => {
       <main>
         <div className="flex justify-center">
           <div>
-            <h1 className="items-center text-center max-w-4xl mx-auto text-3xl font-bold">{props.blog.title}</h1>
+            <h1 className="items-center mx-auto max-w-4xl text-3xl font-bold text-center">{props.blog.title}</h1>
             <img src={props.blog.image.url} alt={props.blog.image.url} width={500} className="py-5 mx-auto" />
             <div className="flex">
               <div>
@@ -56,7 +59,7 @@ const BlogId: NextPage<Props> = (props) => {
             <div>
               <div>
                 <div
-                  className="prose text-left"
+                  className="text-left prose"
                   dangerouslySetInnerHTML={{
                     __html: props.highlightedBody,
                   }}

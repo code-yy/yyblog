@@ -1,8 +1,9 @@
-import { FC } from "react";
 import Head from "next/head";
+import { FC } from "react";
+
 import { Profiles } from "../model/Profile";
-import { Header } from "./Header";
 import { Footer } from "./Footer";
+import { Header } from "./Header";
 
 type Props = {
   children: any;
@@ -19,8 +20,8 @@ export const Layout: FC<Props> = (props) => {
       <header>
         <Header />
       </header>
-      <div className="lg:flex lg:justify-center px-4 lg:px-64 py-8 text-gray-800 bg-gray-50">
-        <main className="block p-3 lg:w-2/3 bg-gray-200 rounded-lg border border-gray-100 shadow-sm">
+      <div className="py-8 px-4 text-gray-800 bg-gray-50 lg:flex lg:justify-center lg:px-64">
+        <main className="block p-3 bg-gray-200 rounded-lg border border-gray-100 shadow-sm lg:w-2/3">
           {props.children}
         </main>
         <Profiles />
