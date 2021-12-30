@@ -1,9 +1,9 @@
 import { GetStaticProps, NextPage } from "next";
-import { Headline } from "src/components/model/Headline";
-import { addClassNames } from "src/lib/addClassNames";
-import { client } from "src/lib/client";
+import { Layout } from "@/components/Layout";
+import { Headline } from "@/components/model/Headline";
+import { addClassNames } from "@/lib/addClassNames";
+import { client } from "@/lib/client";
 import cheerio from "cheerio";
-import { Layout } from "src/components/Layout";
 
 export const getStaticProps: GetStaticProps = async () => {
   const profile: any = await client.get({ endpoint: "profile" });

@@ -1,8 +1,8 @@
 import { GetStaticProps, NextPage } from "next";
-import { Layout } from "src/components/Layout";
-import { Headline } from "src/components/model/Headline";
-import { PortfolioCard } from "src/components/page/PortfolioCard";
-import { client } from "src/lib/client";
+import { Layout } from "@/components/Layout";
+import { Headline } from "@/components/model/Headline";
+import { PortfolioCard } from "@/components/page/PortfolioCard";
+import { client } from "@/lib/client";
 
 export const getStaticProps: GetStaticProps = async () => {
   const portfolio = await client.get({ endpoint: "portfolio" });

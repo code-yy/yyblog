@@ -1,10 +1,10 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
-import { Layout } from "src/components/Layout";
-import { Tag } from "src/components/model/Tag";
-import { fixDateFormat } from "src/lib/fixDateFormat";
-import { addClassNames } from "src/lib/addClassNames";
-import cheerio from "cheerio";
+import { Layout } from "@/components/Layout";
+import { fixDateFormat } from "@/lib/fixDateFormat";
+import { Tag } from "@/components/model/Tag";
+import { addClassNames } from "@/lib/addClassNames";
 import "remixicon/fonts/remixicon.css";
+import cheerio from "cheerio";
 import "highlight.js/styles/hybrid.css";
 
 type Props = {

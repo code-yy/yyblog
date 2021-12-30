@@ -1,6 +1,6 @@
 import { VFC } from "react";
 import Link from "next/link";
-import { fixDateFormat } from "src/lib/fixDateFormat";
+import { fixDateFormat } from "@/lib/fixDateFormat";
 
 type Props = {
   portfolio: {

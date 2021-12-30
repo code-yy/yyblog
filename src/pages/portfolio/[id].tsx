@@ -1,8 +1,8 @@
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
-import { client } from "src/lib/client";
-import { fixDateFormat } from "src/lib/fixDateFormat";
-import { Portfolio } from "src/types/types";
-import { Layout } from "src/components/Layout";
+import { Layout } from "@/components/Layout";
+import { fixDateFormat } from "@/lib/fixDateFormat";
+import { client } from "@/lib/client";
+import { Portfolio } from "@/types/types";
 import "remixicon/fonts/remixicon.css";
 
 type Props = {
