@@ -22,7 +22,7 @@ export const BlogCard: VFC<Props> = (props) => {
         <img
           src={props.blogs.image.url}
           alt={props.blogs.image.url}
-          className="block object-cover w-full border md:w-1/6 min-h-hull"
+          className="block object-cover w-full border md:w-1/6"
         />
         <div className="w-full md:pl-4 md:w-3/4">
           <div>{fixDateFormat(props.blogs.updatedAt)}</div>
