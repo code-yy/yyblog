@@ -17,11 +17,9 @@ type Props = {
 export const Seo: FC<Props> = (props) => {
   const router = useRouter();
   const meta = {
-    title: props.meta?.pageName ? `${props.meta.pageName} | yyblog` : "yyblog",
-    description: props.meta?.description
-      ? `${props.meta.description}`
-      : "プログラミングに関する技術知識を発信するブログです。",
-    image: props.meta?.image ? props.meta.image : "",
+    title: props.meta?.pageName,
+    description: props.meta?.description,
+    image: props.meta?.image,
   };
 
   return (
