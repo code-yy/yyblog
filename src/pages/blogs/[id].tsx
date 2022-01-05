@@ -32,7 +32,7 @@ const BlogId: NextPage<Props> = (props) => {
       meta={{
         pageName: props.blog.title,
         description: props.blog.description,
-        image: props.blog.image.url,
+        pageimg: props.blog.image.url,
       }}
     >
       <main>

@@ -10,7 +10,9 @@ type Props = {
   meta?: {
     pageName?: string;
     description?: string;
-    image?: string;
+    pageimg?: string;
+    pageimgw?: string;
+    pageimgh?: string;
   };
 };
 
@@ -19,7 +21,9 @@ export const Seo: FC<Props> = (props) => {
   const meta = {
     title: props.meta?.pageName,
     description: props.meta?.description,
-    image: props.meta?.image,
+    imgurl: props.meta?.pageimg ? props.meta.pageimg : "/アルカ.PNG",
+    imgw: props.meta?.pageimgw || "1200px",
+    imgh: props.meta?.pageimgh || "630px",
   };
 
   return (
@@ -32,16 +36,16 @@ export const Seo: FC<Props> = (props) => {
         <meta property="og:title" content={meta.title} />
         <meta property="og:description" content="技術知識のアウトプットブログ。" />
         <meta property="og:site_name" content="yyblog" />
-        <meta property="og:image" content={meta.image} />
+        <meta property="og:image" content={meta.imgurl} />
+        <meta property="og:image:width" content={meta.imgw} />
+        <meta property="og:image:height" content={meta.imgh} />
+
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@yuto_yy_76" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
-        <meta
-          name="twitter:image"
-          content="https://images.microcms-assets.io/assets/04476bb0a94f47d080f5c8ba456b1da9/28da69e30ea74b1fa15347d8733679bb/typescript-logo-blog.svg"
-        />
+        <meta name="twitter:image" content={meta.imgurl} />
         <link rel="icon" href="/アルカ.PNG" />
       </Head>
       <header>
