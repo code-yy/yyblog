@@ -36,8 +36,10 @@ export const Seo: FC<Props> = (props) => {
         <meta property="og:site_name" content="yyblog" />
         <meta property="og:image" content={meta.ogImagePath} />
         {/* Twitter */}
-        <meta name="twitter:card" content="Summary Card" />
+        <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@yuto_yy_76" />
+        <meta name="twitter:title" content={meta.title} />
+        <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.ogImagePath} />
         <link rel="icon" href="/アルカ.PNG" />
       </Head>
