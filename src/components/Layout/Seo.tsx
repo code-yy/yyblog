@@ -38,7 +38,10 @@ export const Seo: FC<Props> = (props) => {
         <meta name="twitter:site" content="@yuto_yy_76" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
-        <meta name="twitter:image" content={meta.image} />
+        <meta
+          name="twitter:image"
+          content="https://images.microcms-assets.io/assets/04476bb0a94f47d080f5c8ba456b1da9/28da69e30ea74b1fa15347d8733679bb/typescript-logo-blog.svg"
+        />
         <link rel="icon" href="/アルカ.PNG" />
       </Head>
       <header>
