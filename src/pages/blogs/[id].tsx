@@ -32,7 +32,7 @@ const BlogId: NextPage<Props> = (props) => {
       meta={{
         pageName: props.blog.title,
         description: props.blog.description,
-        ogImagePath: props.blog.image.url,
+        image: props.blog.image.url,
       }}
     >
       <main>
