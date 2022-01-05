@@ -37,7 +37,6 @@ export const Seo: FC<Props> = (props) => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@yuto_yy_76" />
         <meta name="twitter:title" content={meta.title} />
-        <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
         <link rel="icon" href="/アルカ.PNG" />
       </Head>
