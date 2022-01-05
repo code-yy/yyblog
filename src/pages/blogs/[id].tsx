@@ -3,12 +3,12 @@ import "highlight.js/styles/hybrid.css";
 
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 
-import { Layout } from "@/components/Layout";
 import { Tag } from "@/components/model/Tag";
 import { addClassNames } from "@/lib/addClassNames";
 import { fixDateFormat } from "@/lib/fixDateFormat";
 
 import "remixicon/fonts/remixicon.css";
+import { Seo } from "@/components/Layout/Seo";
 
 type Props = {
   blog: {
@@ -28,7 +28,7 @@ type Props = {
 
 const BlogId: NextPage<Props> = (props) => {
   return (
-    <Layout
+    <Seo
       meta={{
         pageName: props.blog.title,
         description: props.blog.description,
@@ -76,7 +76,7 @@ const BlogId: NextPage<Props> = (props) => {
           </div>
         </div>
       </main>
-    </Layout>
+    </Seo>
   );
 };
 
