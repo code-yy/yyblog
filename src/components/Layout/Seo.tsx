@@ -29,11 +29,16 @@ export const Seo: FC<Props> = (props) => {
         <meta name="description" content={meta.description} />
         <meta property="og:url" content={`https://yyblog.vercel.app${router.asPath}`} />
         <meta property="og:type" content="website" />
+        <meta property="og:title" content={meta.title} />
         <meta property="og:description" content="技術知識のアウトプットブログ。" />
         <meta property="og:site_name" content="yyblog" />
+        <meta property="og:image" content={meta.image} />
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@yuto_yy_76" />
+        <meta name="twitter:title" content={meta.title} />
+        <meta name="twitter:description" content={meta.description} />
+        <meta name="twitter:image" content={meta.image} />
         <link rel="icon" href="/アルカ.PNG" />
       </Head>
       <header>
