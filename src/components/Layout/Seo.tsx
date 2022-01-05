@@ -10,7 +10,7 @@ type Props = {
   meta?: {
     pageName?: string;
     description?: string;
-    ogImagePath?: string;
+    image?: string;
   };
 };
 
@@ -21,7 +21,7 @@ export const Seo: FC<Props> = (props) => {
     description: props.meta?.description
       ? `${props.meta.description}`
       : "プログラミングに関する技術知識を発信するブログです。",
-    ogImagePath: props.meta?.ogImagePath ? props.meta.ogImagePath : "",
+    image: props.meta?.image ? props.meta.image : "",
   };
 
   return (
@@ -34,13 +34,13 @@ export const Seo: FC<Props> = (props) => {
         <meta property="og:title" content={meta.title} />
         <meta property="og:description" content="技術知識のアウトプットブログ。" />
         <meta property="og:site_name" content="yyblog" />
-        <meta property="og:image" content={meta.ogImagePath} />
+        <meta property="og:image" content={meta.image} />
         {/* Twitter */}
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@yuto_yy_76" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
-        <meta name="twitter:image" content={meta.ogImagePath} />
+        <meta name="twitter:image" content={meta.image} />
         <link rel="icon" href="/アルカ.PNG" />
       </Head>
       <header>
