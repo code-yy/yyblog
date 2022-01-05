@@ -21,13 +21,20 @@ type Props = {
     image: {
       url: string;
     };
+    description: string;
   };
   highlightedBody: any;
 };
 
 const BlogId: NextPage<Props> = (props) => {
   return (
-    <Layout title={`Blogs | ${props.blog.title}`}>
+    <Layout
+      meta={{
+        pageName: props.blog.title,
+        description: props.blog.description,
+        ogImagePath: props.blog.image.url,
+      }}
+    >
       <main>
         <div className="flex justify-center">
           <div>
