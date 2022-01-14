@@ -7,11 +7,13 @@ type Props = {
   blogs: {
     id: string;
     title: string;
+    slug: string;
     description: string;
     image: {
       url: string;
     };
     updatedAt: string;
+    tags: { name: string; slug: string }[];
   };
 };
 

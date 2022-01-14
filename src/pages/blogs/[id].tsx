@@ -3,12 +3,45 @@ import "highlight.js/styles/hybrid.css";
 
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 
-import { Tag } from "@/components/model/Tag";
+import { TagCard } from "@/components/model/Tag";
 import { addClassNames } from "@/lib/addClassNames";
 import { fixDateFormat } from "@/lib/fixDateFormat";
 
 import "remixicon/fonts/remixicon.css";
 import { Seo } from "@/components/Layout/Seo";
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const key: any = {
+    headers: { "X-API-KEY": process.env.API_KEY },
+  };
+
+  const res = await fetch("https://yutoblog.microcms.io/api/v1/blogs", key);
+  const repos = await res.json();
+
+  const paths: any = repos.contents.map((repo: any) => `/blogs/${repo.id}`);
+  return { paths, fallback: false };
+};
+
+export const getStaticProps: GetStaticProps = async (context: any) => {
+  const id = context.params.id;
+
+  const key: any = {
+    headers: { "X-API-KEY": process.env.API_KEY },
+  };
+
+  const res = await fetch(`https://yutoblog.microcms.io/api/v1/blogs/${id}`, key);
+  const blog = await res.json();
+  const $ = cheerio.load(blog.body);
+
+  const classNamesAddedHtml = addClassNames($);
+
+  return {
+    props: {
+      blog,
+      highlightedBody: classNamesAddedHtml.html(),
+    },
+  };
+};
 
 type Props = {
   blog: {
@@ -16,7 +49,11 @@ type Props = {
     createdAt: string;
     updatedAt: string;
     title: string;
-    tag: any;
+    tag: [
+      {
+        name: string;
+      }
+    ];
     body: any;
     image: {
       url: string;
@@ -54,10 +91,10 @@ const BlogId: NextPage<Props> = (props) => {
             </div>
             <div>
               <ul className="flex items-center">
-                {props.blog.tag.map((tag: any) => {
+                {props.blog.tag.map((tag) => {
                   return (
-                    <li key={tag}>
-                      <Tag tag={tag.name} />
+                    <li key={tag.name}>
+                      <TagCard tag={tag.name} />
                     </li>
                   );
                 })}
@@ -81,36 +118,3 @@ const BlogId: NextPage<Props> = (props) => {
 };
 
 export default BlogId;
-
-export const getStaticPaths: GetStaticPaths = async () => {
-  const key: any = {
-    headers: { "X-API-KEY": process.env.API_KEY },
-  };
-
-  const res = await fetch("https://yutoblog.microcms.io/api/v1/blogs", key);
-  const repos = await res.json();
-
-  const paths: any = repos.contents.map((repo: any) => `/blogs/${repo.id}`);
-  return { paths, fallback: false };
-};
-
-export const getStaticProps: GetStaticProps = async (context: any) => {
-  const id = context.params.id;
-
-  const key: any = {
-    headers: { "X-API-KEY": process.env.API_KEY },
-  };
-
-  const res = await fetch(`https://yutoblog.microcms.io/api/v1/blogs/${id}`, key);
-  const blog = await res.json();
-  const $ = cheerio.load(blog.body);
-
-  const classNamesAddedHtml = addClassNames($);
-
-  return {
-    props: {
-      blog,
-      highlightedBody: classNamesAddedHtml.html(),
-    },
-  };
-};

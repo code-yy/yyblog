@@ -9,8 +9,11 @@ export type Blogs = {
   image: {
     url: string;
   };
-  tags: { name: string; id: string }[];
+  tags: { name: string; slug: string }[];
+  slug: string;
 };
+
+export type Blog = { contents: Blogs[] };
 
 // src/components/page/PortfolioCard.tsx
 export type Portfolio = {
@@ -27,5 +30,7 @@ export type Portfolio = {
 export type Tag = {
   id: string;
   name: string;
+  slug: string;
 };
+
 export type Tags = { contents: Tag[] };

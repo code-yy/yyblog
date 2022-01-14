@@ -1,12 +1,13 @@
 import { GetStaticProps, NextPage } from "next";
-import Head from "next/head";
 import Link from "next/link";
+import { Layout } from "@/components/Layout";
+import { Headline } from "@/components/model/Headline";
 
 import { client } from "src/lib/client";
 import { Tags } from "src/types/types";
 
 export const getStaticProps: GetStaticProps = async () => {
-  const tags: Tags = await client.get({ endpoint: "tag" });
+  const tags: Tags = await client.get({ endpoint: "tags" });
 
   return {
     props: {
@@ -22,14 +23,10 @@ type Props = {
 
 const Tag: NextPage<Props> = (props) => {
   return (
-    <div>
-      <Head>
-        <title>Tags</title>
-        <link rel="icon" href="/profile/アルカ.PNG" />
-      </Head>
+    <Layout title={"yyblog | Tags"}>
       <div className="container flex justify-center mx-auto mt-10">
-        <div className="block py-5 px-10 mb-5 min-w-[665px] bg-gray-200 rounded shadow">
-          <h1 className="text-3xl font-bold text-center">Tags</h1>
+        <div className="block py-5 px-10 mb-5 min-w-[665px] bg-gray-50 rounded shadow">
+          <Headline title={"Tags"} />
           <ul className="pl-4 list-disc">
             {props.tags.contents.map((tag, index) => {
               return (
@@ -43,7 +40,7 @@ const Tag: NextPage<Props> = (props) => {
           </ul>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 
