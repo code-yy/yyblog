@@ -1,21 +1,21 @@
-{
-  "root": true,
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "project": "./tsconfig.json"
+module.exports = {
+  root: true,
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    project: "./tsconfig.json",
   },
-  "extends": [
+  extends: [
     "next/core-web-vitals",
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "prettier",
-    "plugin:tailwindcss/recommended"
+    "plugin:tailwindcss/recommended",
   ],
-  "plugins": ["@typescript-eslint", "import", "unused-imports", "tailwindcss"],
-  "rules": {
-    "semi": "error",
+  plugins: ["@typescript-eslint", "unused-imports", "tailwindcss", "simple-import-sort"],
+  rules: {
+    semi: "error",
     "no-console": "warn",
     "no-var": "error",
     "sort-imports": 0,
@@ -30,10 +30,12 @@
     "unused-imports/no-unused-imports": "error",
     "unused-imports/no-unused-vars": [
       "warn",
-      { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
+      { vars: "all", varsIgnorePattern: "^_", args: "after-used", argsIgnorePattern: "^_" },
     ],
+    "import/newline-after-import": "error",
+    "import-access/jsdoc": "error",
     "tailwindcss/classnames-order": "warn",
     "tailwindcss/no-custom-classname": "warn",
-    "tailwindcss/no-contradicting-classname": "error"
-  }
-}
+    "tailwindcss/no-contradicting-classname": "error",
+  },
+};
