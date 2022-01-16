@@ -1,14 +1,13 @@
 import cheerio from "cheerio";
 import "highlight.js/styles/hybrid.css";
 
-import { GetStaticPaths, GetStaticProps, NextPage } from "next";
-
 import { TagCard } from "@/components/model/Tag";
 import { addClassNames } from "@/lib/addClassNames";
 import { fixDateFormat } from "@/lib/fixDateFormat";
 
 import "remixicon/fonts/remixicon.css";
 import { Seo } from "@/components/Layout/Seo";
+import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const key: any = {
@@ -101,7 +100,7 @@ const BlogId: NextPage<Props> = (props) => {
               </ul>
             </div>
             <div>
-              <div>
+              <div className="pt-5">
                 <div
                   className="text-left prose"
                   dangerouslySetInnerHTML={{

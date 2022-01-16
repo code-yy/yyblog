@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint --dir src",
-    "lint:fix": "next lint --dir src --fix",
-    "format": "prettier --write --ignore-path .gitignore './**/*.{js,ts,tsx,json}"
+    "lint:fix": "next lint --dir src --fix"
   },
   "prettier": {
     "printWidth": 120
@@ -38,7 +37,7 @@
     "@typescript-eslint/eslint-plugin": "^5.8.1",
     "@typescript-eslint/parser": "^5.8.1",
     "autoprefixer": "^10.4.0",
-    "eslint": "7.32.0",
+    "eslint": "^8.7.0",
     "eslint-config-next": "11.1.2",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.3",
