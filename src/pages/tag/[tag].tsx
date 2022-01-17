@@ -1,11 +1,12 @@
-import { Headline } from "@/components/model/Headline";
-import { BlogCard } from "@/components/page/BlogCard";
-import { client } from "@/lib/client";
 import "highlight.js/styles/hybrid.css";
 
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import type { Blog, Tags } from "src/types/types";
+
 import { Layout } from "@/components/Layout";
+import { Headline } from "@/components/model/Headline";
+import { BlogCard } from "@/components/page/BlogCard";
+import { client } from "@/lib/client";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const tags: Tags = await client.get({ endpoint: "tags" });

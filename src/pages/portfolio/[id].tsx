@@ -1,10 +1,11 @@
+import "remixicon/fonts/remixicon.css";
+
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 
 import { Layout } from "@/components/Layout";
 import { client } from "@/lib/client";
 import { fixDateFormat } from "@/lib/fixDateFormat";
-import { Portfolio } from "@/types/types";
-import "remixicon/fonts/remixicon.css";
+import type { Portfolio } from "@/types/types";
 
 type Props = {
   portfolio: Portfolio;
