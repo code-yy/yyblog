@@ -1,6 +1,5 @@
-import hljs from "highlight.js";
-
 import type { CheerioAPI } from "cheerio";
+import hljs from "highlight.js";
 
 export const addClassNames = ($: CheerioAPI) => {
   $("h2").each((_, element) => {

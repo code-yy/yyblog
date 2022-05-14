@@ -1,5 +1,5 @@
 import cheerio from "cheerio";
-import { GetStaticProps, NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 
 import { Layout } from "@/components/Layout";
 import { Headline } from "@/components/model/Headline";

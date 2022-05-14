@@ -1,6 +1,6 @@
 import { useRouter } from "next/dist/client/router";
 import Head from "next/head";
-import { FC } from "react";
+import type { FC } from "react";
 
 import { Profiles } from "../model/Profile";
 import { Footer } from "./Footer";

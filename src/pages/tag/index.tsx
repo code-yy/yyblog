@@ -1,10 +1,10 @@
-import { GetStaticProps, NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import Link from "next/link";
+import { client } from "src/lib/client";
+import type { Tags } from "src/types/types";
+
 import { Layout } from "@/components/Layout";
 import { Headline } from "@/components/model/Headline";
-
-import { client } from "src/lib/client";
-import { Tags } from "src/types/types";
 
 export const getStaticProps: GetStaticProps = async () => {
   const tags: Tags = await client.get({ endpoint: "tags" });
