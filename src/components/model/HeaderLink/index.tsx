@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { VFC } from "react";
+import type { VFC } from "react";
 
 type Props = {
   href: string;

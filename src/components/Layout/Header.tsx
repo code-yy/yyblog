@@ -1,6 +1,7 @@
-import { VFC } from "react";
-
 import "remixicon/fonts/remixicon.css";
+
+import type { VFC } from "react";
+
 import { HeaderLinks } from "../model/HeaderLink";
 
 export const Header: VFC = () => {

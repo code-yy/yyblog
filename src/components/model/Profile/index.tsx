@@ -1,8 +1,9 @@
+import "remixicon/fonts/remixicon.css";
+
 import Link from "next/link";
-import { VFC } from "react";
+import type { VFC } from "react";
 import { FaGithub, FaTwitter } from "react-icons/fa";
 import { SiZenn } from "react-icons/si";
-import "remixicon/fonts/remixicon.css";
 
 const ProfileLayout = "flex shadow rounded py-2 px-7 my-6 items-center";
 

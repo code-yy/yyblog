@@ -1,13 +1,13 @@
-import cheerio from "cheerio";
 import "highlight.js/styles/hybrid.css";
+import "remixicon/fonts/remixicon.css";
 
+import cheerio from "cheerio";
+import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
+
+import { Seo } from "@/components/Layout/Seo";
 import { TagCard } from "@/components/model/Tag";
 import { addClassNames } from "@/lib/addClassNames";
 import { fixDateFormat } from "@/lib/fixDateFormat";
-
-import "remixicon/fonts/remixicon.css";
-import { Seo } from "@/components/Layout/Seo";
-import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const key: any = {
